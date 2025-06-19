@@ -1,0 +1,1 @@
+export type ScreenSize = 'mobile' | 'tablet' | 'laptop' | 'desktop' | '2K' | 'ultrawide' | '4k';

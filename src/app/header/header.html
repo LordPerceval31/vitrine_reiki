@@ -1,0 +1,35 @@
+<div class="backdrop-blur-md bg-white/10 border-b border-white/20 py-6">
+  <!-- Header avec titre centré et burger à droite -->
+  <div class="relative flex justify-center items-center px-4">
+    <h1 class="text-white/90 text-lg font-light cursor-default">
+      Retrouvez votre équilibre énergétique
+    </h1>
+    
+    <div *ngIf="(responsiveService.screenSize$ | async) === 'mobile'" 
+              class="burger-menu absolute right-4 text-white text-2xl cursor-pointer"
+         (click)="toggleMobileMenu()">
+      ☰
+    </div>
+  </div>
+
+ <!-- Navigation desktop -->
+ <nav class="flex justify-center space-x-8 mt-6" *ngIf="(responsiveService.screenSize$ | async) !== 'mobile'">
+   <a (click)="navigateTo('presentation')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer px-4 py-2 rounded-full hover:bg-white/10">Présentation</a>
+   <a (click)="navigateTo('annales akashiques')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer px-4 py-2 rounded-full hover:bg-white/10">ANNALES AKASHIQUES</a>
+   <a (click)="navigateTo('Reiki USUI')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer px-4 py-2 rounded-full hover:bg-white/10">REIKI USUI</a>
+   <a (click)="navigateTo('Reiki LAHOCHI')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer px-4 py-2 rounded-full hover:bg-white/10">LAHOCHI</a>
+   <a (click)="navigateTo('A propos')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer px-4 py-2 rounded-full hover:bg-white/10">A propos</a>
+   <a (click)="navigateTo('Contact')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer px-4 py-2 rounded-full hover:bg-white/10">Contact</a>
+ </nav>
+
+ <!-- Menu mobile -->
+ <div *ngIf="(responsiveService.screenSize$ | async) === 'mobile' && isMobileMenuOpen" 
+      class=" mobile-nav flex flex-col space-y-4 mt-6 px-4">
+   <a (click)="navigateTo('presentation')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer py-2">Présentation</a>
+   <a (click)="navigateTo('annales akashiques')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer py-2">ANNALES AKASHIQUES</a>
+   <a (click)="navigateTo('Reiki USUI')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer py-2">REIKI USUI</a>
+   <a (click)="navigateTo('Reiki LAHOCHI')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer py-2">LAHOCHI</a>
+   <a (click)="navigateTo('A propos')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer py-2">A propos</a>
+   <a (click)="navigateTo('Contact')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer py-2">Contact</a>
+ </div>
+</div>
