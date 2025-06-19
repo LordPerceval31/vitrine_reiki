@@ -10,5 +10,5 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected title = 'vitrine-reiki';
   welcomeMessage = 'Bienvenue sur le site de Reiki';
-  testmessage = 'test';
+  testmessage = 'test2';
 }
