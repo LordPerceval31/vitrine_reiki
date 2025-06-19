@@ -20,4 +20,11 @@ describe('App', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, vitrine-reiki');
   });
+
+it('should have a welcome message', () => {
+  const fixture = TestBed.createComponent(App);
+  const app = fixture.componentInstance;
+  expect(app.welcomeMessage).toBe('Bienvenue sur le site de Reiki');
+});
+
 });

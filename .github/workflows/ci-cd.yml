@@ -6,7 +6,7 @@ on:
       - 'src/**'
       - 'package.json'
   pull_request:
-    branches: [ main, devop ]
+    branches: [ main, front ]
 
 jobs:
   test:
