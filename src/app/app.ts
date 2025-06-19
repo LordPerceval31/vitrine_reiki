@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { inject } from "@angular/core";
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  selector: 'app-root', // Nom du composant en HTML
+  templateUrl: './app.html', // Son apparence (template)
+  styleUrl: './app.scss' // Son style (CSS)
 })
-export class App {
-  protected title = 'vitrine-reiki';
-  welcomeMessage = 'Bienvenue sur le site de Reiki';
-  testmessage = 'test2';
+
+export class AppComponent {
+  private title = inject(Title);
+  private meta = inject(Meta);
+  
+  constructor() {
+    this.title.setTitle('Jocelyne DUBA Reiki');
+    this.meta.addTag({ name: 'keywords', content: 'reiki, annales akashiques, bien-être, guérison, Jocelyne Duba' });
+    this.meta.addTag({ name: 'author', content: 'Jocelyne Duba' });
+  }
 }

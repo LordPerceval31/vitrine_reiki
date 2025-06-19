@@ -5,8 +5,9 @@ import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes)
+    provideBrowserGlobalErrorListeners(), // Gestion des erreurs globales
+    provideZoneChangeDetection({ eventCoalescing: true }), // Système de détection des changements
+    provideRouter(routes), // Système de navigation (routes)
+    // provideClientHydration() 
   ]
 };
