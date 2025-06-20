@@ -1,21 +1,24 @@
-<div class="mt-28 flex items-center justify-center p-8" [ngClass]="{
+<section class="mt-28 flex items-center justify-center p-8" [ngClass]="{
 'flex-col space-y-6 gap-10': responsiveService.isSmallScreen(responsiveService.screenSize$ | async),
 'flex-row space-x-8 gap-10': !responsiveService.isSmallScreen(responsiveService.screenSize$ | async)
 }">
 
-<img src="./photo_profil.webp" alt="photo_profil" 
+<img *ngIf="responsiveService.screenSize$ | async as screenSize"
+     src="./photo_profil.webp" alt="photo_profil" 
      [ngClass]="{
-       'w-64 h-64': responsiveService.isSmallScreen(responsiveService.screenSize$ | async),
-       'w-96 h-96': !responsiveService.isSmallScreen(responsiveService.screenSize$ | async)
+       'w-64 h-64': responsiveService.isSmallScreen(screenSize),
+       'w-96 h-96': !responsiveService.isSmallScreen(screenSize)
      }" 
      class="hero-element rounded-full border-4 border-white/20 shadow-lg"
-     [@fadeSlide]="responsiveService.isSmallScreen(responsiveService.screenSize$ | async) ? 'simple' : 'slide'">
+     [@fadeSlide]="responsiveService.isSmallScreen(screenSize) ? 'simple' : 'slide'">
 
-<div [ngClass]="{
-  'text-center': responsiveService.isSmallScreen(responsiveService.screenSize$ | async),
-  'text-left': !responsiveService.isSmallScreen(responsiveService.screenSize$ | async)
-}" class="hero-element max-w-lg"
-     [@fadeSlideRight]="responsiveService.isSmallScreen(responsiveService.screenSize$ | async) ? 'simple' : 'slide'">
+<div *ngIf="responsiveService.screenSize$ | async as screenSize"
+     [ngClass]="{
+       'text-center': responsiveService.isSmallScreen(screenSize),
+       'text-left': !responsiveService.isSmallScreen(screenSize)
+     }" 
+     class="hero-element max-w-lg"
+     [@fadeSlideRight]="responsiveService.isSmallScreen(screenSize) ? 'simple' : 'slide'">
 
   <h2 class="text-4xl font-bold text-white/90 mb-4">Jocelyne Duba</h2>
   <p class="text-white/80 leading-relaxed mb-4">
@@ -29,4 +32,4 @@
   </p>
 </div>
 
-</div>
+</section>
