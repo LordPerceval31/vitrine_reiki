@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 import { ScreenSize } from '../types/responsive';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ResponsiveService {
   screenSize$ = new BehaviorSubject<ScreenSize>('laptop');
@@ -16,11 +16,11 @@ export class ResponsiveService {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
-    
+
     const width = window.innerWidth;
     let size: ScreenSize = 'laptop';
-    
-    if (width < 450) {
+
+    if (width < 420) {
       size = 'mobile';
     } else if (width < 768) {
       size = 'tablet';
@@ -35,15 +35,24 @@ export class ResponsiveService {
     } else {
       size = '4k';
     }
-    
+
     this.screenSize$.next(size);
   }
 
+  isSmallScreen(screenSize: ScreenSize | null): boolean {
+    return (
+      screenSize !== 'laptop' &&
+      screenSize !== 'desktop' &&
+      screenSize !== '2K' &&
+      screenSize !== 'ultrawide' &&
+      screenSize !== '4k'
+    );
+  }
   startListening(): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
-    
+
     this.detectScreenSize();
     window.addEventListener('resize', this.resizeHandler);
   }
@@ -52,7 +61,7 @@ export class ResponsiveService {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
-    
+
     window.removeEventListener('resize', this.resizeHandler);
   }
 }
