@@ -28,10 +28,6 @@ export class Header implements OnInit, OnDestroy {
   toggleMobileMenu(): void {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
-
-isSmallScreen(screenSize: ScreenSize | null): boolean {
-  return screenSize !== 'laptop' && screenSize !== 'desktop' && screenSize !== '2K' && screenSize !== 'ultrawide' && screenSize !== '4k';
-}
   
   navigateTo(sectionId: string): void {
     this.isMobileMenuOpen = false;
