@@ -5,15 +5,15 @@
       Retrouvez votre équilibre énergétique
     </h1>
     
-    <div *ngIf="(responsiveService.screenSize$ | async) === 'mobile'" 
-              class="burger-menu absolute right-4 text-white text-2xl cursor-pointer"
-         (click)="toggleMobileMenu()">
-      ☰
-    </div>
-  </div>
+    <!-- Burger pour mobile ET tablet (tout ce qui est < laptop) -->
+<div *ngIf="isSmallScreen(responsiveService.screenSize$ | async)" 
+     class="burger-menu absolute right-4 text-white text-2xl cursor-pointer"
+     (click)="toggleMobileMenu()">
+  ☰
+</div>
 
- <!-- Navigation desktop -->
- <nav class="flex justify-center space-x-8 mt-6" *ngIf="(responsiveService.screenSize$ | async) !== 'mobile'">
+ <!-- Navigation desktop (laptop et plus grand) -->
+ <nav class="flex justify-center space-x-8 mt-6" *ngIf="!isSmallScreen(responsiveService.screenSize$ | async)">
    <a (click)="navigateTo('presentation')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer px-4 py-2 rounded-full hover:bg-white/10">Présentation</a>
    <a (click)="navigateTo('annales akashiques')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer px-4 py-2 rounded-full hover:bg-white/10">ANNALES AKASHIQUES</a>
    <a (click)="navigateTo('Reiki USUI')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer px-4 py-2 rounded-full hover:bg-white/10">REIKI USUI</a>
@@ -22,9 +22,9 @@
    <a (click)="navigateTo('Contact')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer px-4 py-2 rounded-full hover:bg-white/10">Contact</a>
  </nav>
 
- <!-- Menu mobile -->
- <div *ngIf="(responsiveService.screenSize$ | async) === 'mobile' && isMobileMenuOpen" 
-      class=" mobile-nav flex flex-col space-y-4 mt-6 px-4">
+ <!-- Menu mobile (mobile ET tablet) -->
+ <div *ngIf="isSmallScreen(responsiveService.screenSize$ | async) && isMobileMenuOpen" 
+      class="mobile-nav flex flex-col space-y-4 mt-6 px-4">
    <a (click)="navigateTo('presentation')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer py-2">Présentation</a>
    <a (click)="navigateTo('annales akashiques')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer py-2">ANNALES AKASHIQUES</a>
    <a (click)="navigateTo('Reiki USUI')" class="text-white/80 hover:text-white font-medium transition-colors duration-200 cursor-pointer py-2">REIKI USUI</a>
