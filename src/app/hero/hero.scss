@@ -1,3 +1,9 @@
-.hero-hidden {
+.hero-element:not(.ng-animating) {
   opacity: 0;
+}
+
+.hero-element.ng-trigger,
+.hero-element.ng-trigger-fadeSlide,
+.hero-element.ng-trigger-fadeSlideRight {
+  opacity: 1;
 }

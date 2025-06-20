@@ -6,18 +6,16 @@
 <img src="./photo_profil.webp" alt="photo_profil" 
      [ngClass]="{
        'w-64 h-64': responsiveService.isSmallScreen(responsiveService.screenSize$ | async),
-       'w-96 h-96': !responsiveService.isSmallScreen(responsiveService.screenSize$ | async),
-       'hero-hidden': !isReady
+       'w-96 h-96': !responsiveService.isSmallScreen(responsiveService.screenSize$ | async)
      }" 
-     class="rounded-full border-4 border-white/20 shadow-lg"
-     [@fadeSlide]="isReady ? (responsiveService.isSmallScreen(responsiveService.screenSize$ | async) ? 'simple' : 'slide') : null">
+     class="hero-element rounded-full border-4 border-white/20 shadow-lg"
+     [@fadeSlide]="responsiveService.isSmallScreen(responsiveService.screenSize$ | async) ? 'simple' : 'slide'">
 
 <div [ngClass]="{
   'text-center': responsiveService.isSmallScreen(responsiveService.screenSize$ | async),
-  'text-left': !responsiveService.isSmallScreen(responsiveService.screenSize$ | async),
-  'hero-hidden': !isReady
-}" class="max-w-lg"
-     [@fadeSlideRight]="isReady ? (responsiveService.isSmallScreen(responsiveService.screenSize$ | async) ? 'simple' : 'slide') : null">
+  'text-left': !responsiveService.isSmallScreen(responsiveService.screenSize$ | async)
+}" class="hero-element max-w-lg"
+     [@fadeSlideRight]="responsiveService.isSmallScreen(responsiveService.screenSize$ | async) ? 'simple' : 'slide'">
 
   <h2 class="text-4xl font-bold text-white/90 mb-4">Jocelyne Duba</h2>
   <p class="text-white/80 leading-relaxed mb-4">
