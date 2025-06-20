@@ -52,11 +52,11 @@ describe('Header', () => {
     fixture.detectChanges();
     
     const compiled = fixture.nativeElement as HTMLElement;
-    const links = compiled.querySelectorAll('a');
+    const links = compiled.querySelectorAll('button');
     expect(links.length).toBe(6);
 
     links.forEach((link) => {
-      expect(link.tagName).toBe('A');
+      expect(link.tagName).toBe('BUTTON');
     });
   });
 
@@ -93,14 +93,14 @@ describe('Header', () => {
 
   it('should show mobile navigation when menu is open', () => {
     const responsiveService = TestBed.inject(ResponsiveService);
-    responsiveService.screenSize$.next('mobile');
+    responsiveService.screenSize$.next('tablet');
     component.isMobileMenuOpen = true;
     fixture.detectChanges();
 
     const mobileNav = fixture.nativeElement.querySelector('.mobile-nav');
     expect(mobileNav).toBeTruthy();
     
-    const links = mobileNav.querySelectorAll('a');
+    const links = mobileNav.querySelectorAll('button');
     expect(links.length).toBe(6);
   });
 
@@ -111,7 +111,7 @@ describe('Header', () => {
     fixture.detectChanges();
 
     const mobileNav = fixture.nativeElement.querySelector('.mobile-nav');
-    const firstLink = mobileNav.querySelector('a');
+    const firstLink = mobileNav.querySelector('button');
     
     firstLink.click();
     expect(component.isMobileMenuOpen).toBeFalsy();

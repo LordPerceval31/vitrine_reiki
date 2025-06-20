@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { ScrollService } from '../services/scroll';
 import { ResponsiveService } from '../services/responsive';
 import { ScreenSize } from '../types/responsive';
+import { EnergyClickDirective } from '../directives/energy-click';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.html',
   styleUrl: './header.scss',
-  imports: [CommonModule]
+  imports: [CommonModule, EnergyClickDirective]
 })
 export class Header implements OnInit, OnDestroy {
   private scrollService = inject(ScrollService);
