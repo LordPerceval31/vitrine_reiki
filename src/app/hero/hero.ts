@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, AfterViewInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ResponsiveService } from '../services/responsive';
 import { CommonModule } from '@angular/common';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -31,11 +31,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ])
   ]
 })
-export class Hero implements AfterViewInit {
+export class Hero {
   responsiveService = inject(ResponsiveService);
-  isReady = false;
-
-  ngAfterViewInit() {
-    setTimeout(() => this.isReady = true, 0);
-  }
 }
