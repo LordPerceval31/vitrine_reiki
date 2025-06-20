@@ -20,7 +20,7 @@ export class ResponsiveService {
     const width = window.innerWidth;
     let size: ScreenSize = 'laptop';
     
-    if (width < 420) {
+    if (width < 450) {
       size = 'mobile';
     } else if (width < 768) {
       size = 'tablet';
