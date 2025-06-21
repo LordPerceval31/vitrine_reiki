@@ -3,12 +3,15 @@ import { inject } from "@angular/core";
 import { Meta, Title } from '@angular/platform-browser';
 import { Header } from './header/header';
 import { Hero } from './hero/hero';
+import { Akashic } from './treatments/akashic/akashic';
+import { Usui } from './treatments/usui/usui';
+import { Lahochi } from './treatments/lahochi/lahochi';
 
 @Component({
   selector: 'app-root', // Nom du composant en HTML
   templateUrl: './app.html', // Son apparence (template)
   styleUrl: './app.scss', // Son style (CSS)
-  imports: [Header, Hero]
+  imports: [Header, Hero, Akashic, Usui, Lahochi]
 })
 
 export class AppComponent {

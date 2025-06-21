@@ -1,90 +1,123 @@
-<div class="backdrop-blur-md bg-white/10 border-b border-white/20 py-6">
+<div
+  class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/10 border-b border-white/20 py-6"
+>
   <!-- Header avec titre centré et burger à droite -->
   <div class="relative flex justify-center items-center">
     <h1 class="text-white/90 text-lg font-light cursor-default">
       Retrouvez votre équilibre énergétique
     </h1>
-    
-    <div *ngIf="responsiveService.isSmallScreen(responsiveService.screenSize$ | async)" 
-         class="burger-menu absolute right-4 text-white text-2xl cursor-pointer"
-         (click)="toggleMobileMenu()">
+
+    <div
+      *ngIf="responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
+      class="burger-menu absolute right-4 text-white text-2xl cursor-pointer"
+      (click)="toggleMobileMenu()"
+    >
       ☰
     </div>
-  </div> 
+  </div>
 
- <!-- Navigation desktop moderne -->
- <nav class="flex justify-center items-end gap-10 mt-8 mb-0" *ngIf="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)">
-   <button energyClick 
-           (click)="navigateTo('presentation')" 
-           class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1">
-     Présentation
-   </button>
-   <button energyClick 
-           (click)="navigateTo('annales akashiques')" 
-           class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1">
-     ANNALES AKASHIQUES
-   </button>
-   <button energyClick 
-           (click)="navigateTo('Reiki USUI')" 
-           class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1">
-     REIKI USUI
-   </button>
-   <button energyClick 
-           (click)="navigateTo('Reiki LAHOCHI')" 
-           class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1">
-     LAHOCHI
-   </button>
-   <button energyClick 
-           (click)="navigateTo('A propos')" 
-           class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1">
-     A propos
-   </button>
-   <button energyClick 
-           (click)="navigateTo('Contact')" 
-           class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1">
-     Contact
-   </button>
- </nav>
+  <!-- Navigation desktop moderne -->
+  <nav
+    class="flex justify-center items-end gap-10 mt-8 mb-0"
+    *ngIf="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
+  >
+    <button
+      energyClick
+      (click)="navigateTo('presentation')"
+      class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
+    >
+      Présentation
+    </button>
+    <button
+      energyClick
+      (click)="navigateTo('annales akashiques')"
+      class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
+    >
+      ANNALES AKASHIQUES
+    </button>
+    <button
+      energyClick
+      (click)="navigateTo('REIKI USUI')"
+      class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
+    >
+      REIKI USUI
+    </button>
+    <button
+      energyClick
+      (click)="navigateTo('REIKI LAHOCHI')"
+      class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
+    >
+      LAHOCHI
+    </button>
+    <button
+      energyClick
+      (click)="navigateTo('A propos')"
+      class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
+    >
+      A propos
+    </button>
+    <button
+      energyClick
+      (click)="navigateTo('Contact')"
+      class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
+    >
+      Contact
+    </button>
+  </nav>
 </div>
 
 <!-- Menu mobile FLOTTANT -->
-<div *ngIf="responsiveService.isSmallScreen(responsiveService.screenSize$ | async) && isMobileMenuOpen" 
-     class="fixed top-0 left-0 w-full h-full bg-black/50 z-50"
-     (click)="toggleMobileMenu()">
-  
+<div
+  *ngIf="responsiveService.isSmallScreen(responsiveService.screenSize$ | async) && isMobileMenuOpen"
+  class="fixed top-0 left-0 w-full h-full bg-black/50 z-50"
+  (click)="toggleMobileMenu()"
+>
   <!-- Le menu lui-même -->
-  <div class="absolute top-20 right-4 backdrop-blur-md bg-white/10 border border-white/20 rounded-lg shadow-lg p-4 min-w-[200px]"
-       (click)="$event.stopPropagation()">
-    
+  <div
+    class="absolute top-20 right-4 backdrop-blur-md bg-white/10 border border-white/20 rounded-lg shadow-lg p-4 min-w-[200px]"
+    (click)="$event.stopPropagation()"
+  >
     <nav class="mobile-nav flex flex-col space-y-3">
-      <button energyClick 
-              (click)="navigateTo('presentation')" 
-              class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1">
+      <button
+        energyClick
+        (click)="navigateTo('presentation')"
+        class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
+      >
         Présentation
       </button>
-      <button energyClick 
-              (click)="navigateTo('annales akashiques')" 
-              class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1">
+      <button
+        energyClick
+        (click)="navigateTo('annales akashiques')"
+        class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
+      >
         ANNALES AKASHIQUES
       </button>
-      <button energyClick 
-              (click)="navigateTo('Reiki USUI')" 
-              class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1">
+      <button
+        energyClick
+        (click)="navigateTo('REIKI USUI')"
+        class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
+      >
         REIKI USUI
       </button>
-      <button energyClick 
-              (click)="navigateTo('Reiki LAHOCHI')" 
-              class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1">
+      <button
+        energyClick
+        (click)="navigateTo('REIKI LAHOCHI')"
+        class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
+      >
         LAHOCHI
       </button>
-      <button energyClick 
-              (click)="navigateTo('A propos')" 
-              class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1">
+      <button
+        energyClick
+        (click)="navigateTo('A propos')"
+        class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
+      >
         A propos
       </button>
-      <button energyClick 
-              (click)="navigateTo('Contact')" 
-              class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1">
+      <button
+        energyClick
+        (click)="navigateTo('Contact')"
+        class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
+      >
         Contact
       </button>
     </nav>

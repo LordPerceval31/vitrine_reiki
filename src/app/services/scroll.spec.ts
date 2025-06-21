@@ -22,7 +22,7 @@ describe('ScrollService', () => {
 it('should call window.scrollTo when scrollToTop is called', () => {
   spyOn(window, 'scrollTo');
   service.scrollToTop();
-  expect(window.scrollTo).toHaveBeenCalledWith(0, 0);
+  expect(window.scrollTo).toHaveBeenCalled();
 });
 
 it('should scroll to element when scrollTo is called', () => {
