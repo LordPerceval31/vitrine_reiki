@@ -7,31 +7,35 @@ describe('Hero', () => {
   let component: Hero;
   let fixture: ComponentFixture<Hero>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [Hero],
-      providers: [
-        { provide: PLATFORM_ID, useValue: 'browser' },
-        provideNoopAnimations()
-      ]
-    }).compileComponents();
+beforeEach(async () => {
+  await TestBed.configureTestingModule({
+    imports: [Hero],
+    providers: [
+      { provide: PLATFORM_ID, useValue: 'browser' },
+      provideNoopAnimations()
+    ]
+  }).compileComponents();
 
-    fixture = TestBed.createComponent(Hero);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  fixture = TestBed.createComponent(Hero);
+  component = fixture.componentInstance;
+  
+  fixture.detectChanges();
+  await fixture.whenStable();
+
+  fixture.detectChanges();
+});
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should picture be displayed', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('img')).toBeTruthy();
-  });
+it('should picture be displayed', () => {
+  const compiled = fixture.nativeElement as HTMLElement;
+  expect(compiled.querySelector('img')).toBeTruthy();
+});
 
-  it('should text be displayed', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('p')?.textContent).toBeTruthy();
-  });
+it('should text be displayed', () => {
+  const compiled = fixture.nativeElement as HTMLElement;
+  expect(compiled.querySelector('p')?.textContent).toBeTruthy();
+});
 });
