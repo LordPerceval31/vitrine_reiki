@@ -17,46 +17,46 @@
   </div>
 
   <!-- Navigation desktop moderne -->
-  <nav
+  <nav aria-label="Navigation principale"
     class="flex justify-center items-end gap-10 mt-8 mb-0"
     *ngIf="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
   >
-    <button
+    <button aria-label="Aller à la section Présentation"
       energyClick
       (click)="navigateTo('presentation')"
       class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
     >
       Présentation
     </button>
-    <button
+    <button aria-label="Aller à annales akashiques"
       energyClick
       (click)="navigateTo('annales akashiques')"
       class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
     >
       ANNALES AKASHIQUES
     </button>
-    <button
+    <button aria-label="Aller à REIKI USUI"
       energyClick
       (click)="navigateTo('REIKI USUI')"
       class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
     >
       REIKI USUI
     </button>
-    <button
+    <button aria-label="Aller à REIKI LAHOCHI"
       energyClick
       (click)="navigateTo('REIKI LAHOCHI')"
       class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
     >
       LAHOCHI
     </button>
-    <button
+    <button aria-label="Aller à A propos"
       energyClick
       (click)="navigateTo('A propos')"
       class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
     >
       A propos
     </button>
-    <button
+    <button aria-label="Aller à Contact"
       energyClick
       (click)="navigateTo('Contact')"
       class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
@@ -77,43 +77,44 @@
     class="absolute top-20 right-4 backdrop-blur-md bg-white/10 border border-white/20 rounded-lg shadow-lg p-4 min-w-[200px]"
     (click)="$event.stopPropagation()"
   >
-    <nav class="mobile-nav flex flex-col space-y-3">
-      <button
+    <nav class="mobile-nav flex flex-col space-y-3" 
+    aria-label="Navigation principale">
+      <button aria-label="Aller à la section Présentation" 
         energyClick
         (click)="navigateTo('presentation')"
         class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
       >
         Présentation
       </button>
-      <button
+      <button aria-label="Aller à annales akashiques" 
         energyClick
         (click)="navigateTo('annales akashiques')"
         class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
       >
         ANNALES AKASHIQUES
       </button>
-      <button
+      <button aria-label="Aller à la REIKI USUI" 
         energyClick
         (click)="navigateTo('REIKI USUI')"
         class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
       >
         REIKI USUI
       </button>
-      <button
+      <button aria-label="Aller à la REIKI LAHOCHI" 
         energyClick
         (click)="navigateTo('REIKI LAHOCHI')"
         class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
       >
         LAHOCHI
       </button>
-      <button
+      <button aria-label="Aller à la A propos" 
         energyClick
         (click)="navigateTo('A propos')"
         class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
       >
         A propos
       </button>
-      <button
+      <button aria-label="Aller à Contact" 
         energyClick
         (click)="navigateTo('Contact')"
         class="text-white/80 hover:text-white font-medium cursor-pointer bg-transparent transition-all duration-150 active:translate-y-1"
