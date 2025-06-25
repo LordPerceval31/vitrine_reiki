@@ -42,4 +42,5 @@ describe('About', () => {
     expect(compiled.textContent).toContain('transformatrice');
     expect(compiled.textContent).toContain('sensation de légèreté');
   });
+  // coucou
 });
