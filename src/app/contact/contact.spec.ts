@@ -1,3 +1,10 @@
+const mockEmailJS = {
+  sendForm: jasmine.createSpy('sendForm').and.returnValue(Promise.resolve({
+    status: 200,
+    text: 'SUCCESS!'
+  }))
+};
+
 import {
   ComponentFixture,
   fakeAsync,
@@ -14,6 +21,8 @@ describe('Contact', () => {
   let fixture: ComponentFixture<Contact>;
 
   beforeEach(async () => {
+    spyOn(emailjs, 'sendForm').and.callFake(mockEmailJS.sendForm);
+    
     await TestBed.configureTestingModule({
       imports: [Contact, FormsModule],
     }).compileComponents();
@@ -80,7 +89,7 @@ describe('Contact', () => {
     
     expect(phoneInput).toBeTruthy();
     expect(phoneInput.type).toBe('tel');
-    expect(phoneInput.required).toBe(false); // Pas requis d'après ton HTML
+    expect(phoneInput.required).toBe(false);
     expect(phoneInput.id).toBe('mobile_phone');
   });
 
@@ -119,12 +128,10 @@ describe('Contact', () => {
     expect(submitButton?.textContent?.trim()).toBe('✨ Envoyer');
   });
 
-  // Tests de validation des champs requis
   it('should show validation errors for required fields when empty', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const form = compiled.querySelector('form') as HTMLFormElement;
     
-    // Essayer de soumettre le formulaire vide
     const submitEvent = new Event('submit');
     form.dispatchEvent(submitEvent);
     
@@ -143,18 +150,15 @@ describe('Contact', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const emailInput = compiled.querySelector('[name="user_email"]') as HTMLInputElement;
     
-    // Email invalide
     emailInput.value = 'email-invalide';
     emailInput.dispatchEvent(new Event('input'));
     expect(emailInput.validity.valid).toBe(false);
     
-    // Email valide
     emailInput.value = 'test@example.com';
     emailInput.dispatchEvent(new Event('input'));
     expect(emailInput.validity.valid).toBe(true);
   });
 
-  // Tests d'interaction avec les champs
   it('should update input values when user types', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const nameInput = compiled.querySelector('[name="user_name"]') as HTMLInputElement;
@@ -177,14 +181,8 @@ describe('Contact', () => {
     expect(component.sendEmail).toHaveBeenCalledWith(event);
   }));
 
+
   it('should call emailjs.sendForm when sendEmail is called', () => {
-    const mockResponse: EmailJSResponseStatus = {
-      status: 200,
-      text: 'SUCCESS!',
-    };
-
-    spyOn(emailjs, 'sendForm').and.returnValue(Promise.resolve(mockResponse));
-
     const mockForm = document.createElement('form');
     const mockEvent = new Event('submit');
     Object.defineProperty(mockEvent, 'target', {
@@ -202,6 +200,7 @@ describe('Contact', () => {
     );
   });
 
+
   it('should prevent default when form is submitted', () => {
     const mockForm = document.createElement('form');
     const mockEvent = new Event('submit');
@@ -211,12 +210,6 @@ describe('Contact', () => {
     });
 
     spyOn(mockEvent, 'preventDefault');
-    spyOn(emailjs, 'sendForm').and.returnValue(
-      Promise.resolve({
-        status: 200,
-        text: 'SUCCESS!',
-      } as EmailJSResponseStatus)
-    );
 
     component.sendEmail(mockEvent);
 
