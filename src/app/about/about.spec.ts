@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PLATFORM_ID } from '@angular/core';
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
-import { About } from './About';
+import { About } from './about';
 
 describe('About', () => {
   let component: About;
@@ -28,7 +28,7 @@ describe('About', () => {
   it('should have correct section id', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const section = compiled.querySelector('section');
-    expect(section?.id).toBe('About');
+    expect(section?.id).toBe('about');
   });
 
   it('should display title', () => {
@@ -42,4 +42,5 @@ describe('About', () => {
     expect(compiled.textContent).toContain('transformatrice');
     expect(compiled.textContent).toContain('sensation de légèreté');
   });
+  // coucou
 });

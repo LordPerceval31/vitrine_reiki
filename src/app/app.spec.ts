@@ -1,23 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Title, Meta } from '@angular/platform-browser';
+import { PLATFORM_ID } from '@angular/core';
 import { AppComponent } from './app';
+import { SeoService } from './services/SEO';
 
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
-  let titleSpy: jasmine.SpyObj<Title>;
-  let metaSpy: jasmine.SpyObj<Meta>;
+  let seoServiceSpy: jasmine.SpyObj<SeoService>;
 
   beforeEach(async () => {
-    // Créer les mocks
-    titleSpy = jasmine.createSpyObj('Title', ['setTitle']);
-    metaSpy = jasmine.createSpyObj('Meta', ['addTag']);
+    // Créer le mock du SeoService
+    seoServiceSpy = jasmine.createSpyObj('SeoService', ['updateSEO']);
 
     await TestBed.configureTestingModule({
       imports: [AppComponent],
       providers: [
-        { provide: Title, useValue: titleSpy },
-        { provide: Meta, useValue: metaSpy }
+        { provide: SeoService, useValue: seoServiceSpy },
+        { provide: PLATFORM_ID, useValue: 'browser' }
       ]
     }).compileComponents();
 
@@ -30,24 +30,29 @@ describe('AppComponent', () => {
   });
 
   it('should set the correct title', () => {
-    expect(titleSpy.setTitle).toHaveBeenCalledWith('Jocelyne DUBA Reiki');
+    expect(seoServiceSpy.updateSEO).toHaveBeenCalledWith(jasmine.objectContaining({
+      title: 'Jocelyne DUBA - Reiki Usui, LaHoChi & Annales Akashiques'
+    }));
   });
 
   it('should add keywords meta tag', () => {
-    expect(metaSpy.addTag).toHaveBeenCalledWith({
-      name: 'keywords',
-      content: 'reiki, annales akashiques, bien-être, guérison, Jocelyne Duba'
-    });
+    expect(seoServiceSpy.updateSEO).toHaveBeenCalledWith(jasmine.objectContaining({
+      keywords: jasmine.stringContaining('reiki usui, lahochi, annales akashiques, Jocelyne Duba')
+    }));
   });
 
   it('should add author meta tag', () => {
-    expect(metaSpy.addTag).toHaveBeenCalledWith({
-      name: 'author',
-      content: 'Jocelyne Duba'
-    });
+    // L'author est maintenant dans les structured data
+    expect(seoServiceSpy.updateSEO).toHaveBeenCalledWith(jasmine.objectContaining({
+      structuredData: jasmine.objectContaining({
+        provider: jasmine.objectContaining({
+          name: 'Jocelyne Duba'
+        })
+      })
+    }));
   });
 
-  it('should call addTag twice for meta tags', () => {
-    expect(metaSpy.addTag).toHaveBeenCalledTimes(2);
+  it('should call updateSEO once', () => {
+    expect(seoServiceSpy.updateSEO).toHaveBeenCalledTimes(1);
   });
 });

@@ -7,15 +7,15 @@ import {
   ViewChild,
   ChangeDetectorRef,
 } from '@angular/core';
-import { ResponsiveService } from '../../app/services/responsive';
-import { VisibilityService } from '../../app/services/visibility';
+import { ResponsiveService } from '../services/responsive';
+import { VisibilityService } from '../services/visibility';
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-about',
   template: ` <section #aboutSection 
-         id="About" 
+         id="about" 
          class="transition-all duration-1000 opacity-0 translate-y-10"
          [class.py-16]="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
          [class.py-0]="responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
