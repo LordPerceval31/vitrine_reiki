@@ -28,7 +28,7 @@ describe('About', () => {
   it('should have correct section id', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const section = compiled.querySelector('section');
-    expect(section?.id).toBe('About');
+    expect(section?.id).toBe('about');
   });
 
   it('should display title', () => {

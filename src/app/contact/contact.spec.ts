@@ -7,7 +7,7 @@ import {
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { Contact } from './contact';
 import { FormsModule } from '@angular/forms';
-import { environment } from '../../environments/environments.local';
+import { environment } from '../environments/environments.local';
 
 describe('Contact', () => {
   let component: Contact;
@@ -43,14 +43,72 @@ describe('Contact', () => {
     expect(compiled.textContent).toContain('ce formulaire');
   });
 
-  it('should have form with name input', () => {
+  // Tests pour tous les champs du formulaire
+  it('should have name input field', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const form = compiled.querySelector('form');
-    const nameInput = compiled.querySelector('[name="user_name"]');
-
-    expect(form).toBeTruthy();
+    const nameInput = compiled.querySelector('[name="user_name"]') as HTMLInputElement;
+    
     expect(nameInput).toBeTruthy();
-    expect(nameInput?.getAttribute('type')).toBe('text');
+    expect(nameInput.type).toBe('text');
+    expect(nameInput.required).toBe(true);
+    expect(nameInput.id).toBe('name');
+  });
+
+  it('should have firstname input field', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const firstnameInput = compiled.querySelector('[name="user_firstname"]') as HTMLInputElement;
+    
+    expect(firstnameInput).toBeTruthy();
+    expect(firstnameInput.type).toBe('text');
+    expect(firstnameInput.required).toBe(true);
+    expect(firstnameInput.id).toBe('firstName');
+  });
+
+  it('should have email input field', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const emailInput = compiled.querySelector('[name="user_email"]') as HTMLInputElement;
+    
+    expect(emailInput).toBeTruthy();
+    expect(emailInput.type).toBe('email');
+    expect(emailInput.required).toBe(true);
+    expect(emailInput.id).toBe('email');
+  });
+
+  it('should have phone input field', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const phoneInput = compiled.querySelector('[name="user_phone"]') as HTMLInputElement;
+    
+    expect(phoneInput).toBeTruthy();
+    expect(phoneInput.type).toBe('tel');
+    expect(phoneInput.required).toBe(false); // Pas requis d'après ton HTML
+    expect(phoneInput.id).toBe('mobile_phone');
+  });
+
+  it('should have message textarea field', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const messageTextarea = compiled.querySelector('[name="message"]') as HTMLTextAreaElement;
+    
+    expect(messageTextarea).toBeTruthy();
+    expect(messageTextarea.tagName).toBe('TEXTAREA');
+    expect(messageTextarea.required).toBe(true);
+    expect(messageTextarea.id).toBe('message');
+    expect(messageTextarea.rows).toBe(5);
+  });
+
+  it('should have all labels for form fields', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    
+    const nameLabel = compiled.querySelector('label[for="name"]');
+    const firstNameLabel = compiled.querySelector('label[for="firstName"]');
+    const emailLabel = compiled.querySelector('label[for="email"]');
+    const phoneLabel = compiled.querySelector('label[for="mobile_phone"]');
+    const messageLabel = compiled.querySelector('label[for="message"]');
+    
+    expect(nameLabel?.textContent?.trim()).toBe('Nom *');
+    expect(firstNameLabel?.textContent?.trim()).toBe('Prénom *');
+    expect(emailLabel?.textContent?.trim()).toBe('Email *');
+    expect(phoneLabel?.textContent?.trim()).toBe('Téléphone');
+    expect(messageLabel?.textContent?.trim()).toBe('Message *');
   });
 
   it('should have submit button', () => {
@@ -59,6 +117,52 @@ describe('Contact', () => {
 
     expect(submitButton).toBeTruthy();
     expect(submitButton?.textContent?.trim()).toBe('✨ Envoyer');
+  });
+
+  // Tests de validation des champs requis
+  it('should show validation errors for required fields when empty', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const form = compiled.querySelector('form') as HTMLFormElement;
+    
+    // Essayer de soumettre le formulaire vide
+    const submitEvent = new Event('submit');
+    form.dispatchEvent(submitEvent);
+    
+    const nameInput = compiled.querySelector('[name="user_name"]') as HTMLInputElement;
+    const firstnameInput = compiled.querySelector('[name="user_firstname"]') as HTMLInputElement;
+    const emailInput = compiled.querySelector('[name="user_email"]') as HTMLInputElement;
+    const messageInput = compiled.querySelector('[name="message"]') as HTMLTextAreaElement;
+    
+    expect(nameInput.validity.valid).toBe(false);
+    expect(firstnameInput.validity.valid).toBe(false);
+    expect(emailInput.validity.valid).toBe(false);
+    expect(messageInput.validity.valid).toBe(false);
+  });
+
+  it('should validate email format', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const emailInput = compiled.querySelector('[name="user_email"]') as HTMLInputElement;
+    
+    // Email invalide
+    emailInput.value = 'email-invalide';
+    emailInput.dispatchEvent(new Event('input'));
+    expect(emailInput.validity.valid).toBe(false);
+    
+    // Email valide
+    emailInput.value = 'test@example.com';
+    emailInput.dispatchEvent(new Event('input'));
+    expect(emailInput.validity.valid).toBe(true);
+  });
+
+  // Tests d'interaction avec les champs
+  it('should update input values when user types', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const nameInput = compiled.querySelector('[name="user_name"]') as HTMLInputElement;
+    
+    nameInput.value = 'John';
+    nameInput.dispatchEvent(new Event('input'));
+    
+    expect(nameInput.value).toBe('John');
   });
 
   it('should call sendEmail when form is submitted', fakeAsync(() => {

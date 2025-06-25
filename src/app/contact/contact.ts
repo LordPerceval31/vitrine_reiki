@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
-import { environment } from '../../environments/environments.local';
+import { environment } from '../environments/environments.local';
 
 @Component({
   selector: 'app-contact',
