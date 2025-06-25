@@ -14,7 +14,7 @@ import {
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { Contact } from './contact';
 import { FormsModule } from '@angular/forms';
-import { environment } from '../environments/environments.local';
+import { environment } from '../environments/environment.local';
 
 describe('Contact', () => {
   let component: Contact;
