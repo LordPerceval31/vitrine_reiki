@@ -25,7 +25,7 @@ import { Subscription } from 'rxjs';
            [class.opacity-0]="!isVisible"
            [class.-translate-x-10]="!isVisible">
         <img src="./photo_profil.webp"
-             alt="Jocelyne Duba - Praticienne Reiki"
+             alt="Portrait de Jocelyne Duba, praticienne certifiée en Reiki Usui et LaHoChi depuis longtemps."
              class="w-96 h-96 object-cover rounded-full border-4 border-white/20 shadow-xl">
       </div>
 
@@ -38,7 +38,7 @@ import { Subscription } from 'rxjs';
         <h2 class="text-5xl font-bold text-white/90 mb-6 cursor-default">Jocelyne Duba</h2>
         
         <p class="text-white/80 leading-relaxed mb-6 text-lg cursor-default">
-          Praticienne certifiée en Reiki Usui et LaHoChi depuis plus de 15 ans, je vous accompagne dans votre quête d'équilibre énergétique et de bien-être spirituel.
+          Praticienne certifiée en Reiki Usui et LaHoChi depuis longtemps, je vous accompagne dans votre quête d'équilibre énergétique et de bien-être spirituel.
         </p>
         
         <p class="text-white/80 leading-relaxed mb-6 text-lg cursor-default">
