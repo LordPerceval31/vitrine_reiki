@@ -44,7 +44,7 @@
       </p>
     </div>
 
-    <!-- FORMULAIRE DANS SON PROPRE CONTAINER -->
+    <!-- FORMULAIRE -->
     <div
       class="w-full mx-auto transition-all duration-1000 delay-400"
       [class.max-w-sm]="responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
@@ -56,14 +56,41 @@
     >
       <form (submit)="sendEmail($event)" class="space-y-6">
         
-        <!-- LIGNE 1: NOM ET PRÉNOM -->
+        <!-- LIGNE 1: MR/MME, NOM ET PRÉNOM -->
         <div 
-          class="gap-6"
           [class.grid]="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
-          [class.grid-cols-2]="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
+          [class.grid-cols-11]="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
           [class.space-y-6]="responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
         >
-          <div class="relative">
+          <!-- Mr/Mme Column -->
+          <div class="col-span-1 flex flex-col justify-center h-full space-y-3 mr-4"
+               *ngIf="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)">
+            <div class="flex items-center">
+              <input type="radio" id="mr" name="title" value="mr" class="w-3 h-3 text-white/40 bg-transparent border border-white/20 focus:border-white/30 transition-all duration-300 cursor-pointer opacity-60">
+              <label for="mr" class="ml-2 text-white/50 text-xs cursor-pointer">Mr</label>
+            </div>
+            <div class="flex items-center">
+              <input type="radio" id="mme" name="title" value="mme" class="w-3 h-3 text-white/40 bg-transparent border border-white/20 focus:border-white/30 transition-all duration-300 cursor-pointer opacity-60">
+              <label for="mme" class="ml-2 text-white/50 text-xs cursor-pointer">Mme</label>
+            </div>
+          </div>
+          
+          <!-- Mr/Mme Mobile -->
+          <div class="flex gap-4 justify-center"
+               *ngIf="responsiveService.isSmallScreen(responsiveService.screenSize$ | async)">
+            <div class="flex items-center">
+              <input type="radio" id="mr-mobile" name="title" value="mr" class="w-4 h-4 text-white/70 bg-white/5 border-2 border-white/10 focus:border-white/40 transition-all duration-300 cursor-pointer">
+              <label for="mr-mobile" class="ml-2 text-white/70 text-sm cursor-pointer">Mr</label>
+            </div>
+            <div class="flex items-center">
+              <input type="radio" id="mme-mobile" name="title" value="mme" class="w-4 h-4 text-white/70 bg-white/5 border-2 border-white/10 focus:border-white/40 transition-all duration-300 cursor-pointer">
+              <label for="mme-mobile" class="ml-2 text-white/70 text-sm cursor-pointer">Mme</label>
+            </div>
+          </div>
+          
+          <!-- Nom -->
+          <div class="relative mr-4"
+               [class.col-span-5]="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)">
             <input
               type="text"
               name="user_name"
@@ -80,7 +107,9 @@
             </label>
           </div>
           
-          <div class="relative">
+          <!-- Prénom -->
+          <div class="relative"
+               [class.col-span-5]="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)">
             <input
               type="text"
               name="user_firstname"
@@ -93,7 +122,7 @@
               for="firstName" 
               class="absolute left-4 top-2 text-xs text-white/60 transition-all duration-200 peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-placeholder-shown:text-white/40 peer-focus:text-xs peer-focus:top-2 peer-focus:text-white/80"
             >
-              Prénom *
+              Prénom
             </label>
           </div>
         </div>
@@ -157,19 +186,24 @@
           </label>
         </div>
         
-        <!-- BOUTON -->
-        <div class="text-center pt-6">
-          <button
-            type="submit"
-            aria-label="envoyer le formulaire"
-            energyClick
-            class="group relative px-8 py-4 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border-2 border-white/20 rounded-xl text-white font-semibold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:border-white/40 hover:shadow-xl hover:shadow-white/10 active:scale-95"
-          >
-            <span class="relative z-10 transition-all duration-300 group-hover:text-white/95">
-              ✨ Envoyer
-            </span>
-            <div class="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </button>
+        <!-- TEXTE OBLIGATOIRE ET BOUTON -->
+        <div>
+          <p class="text-left text-white/60 text-xs italic mb-4 cursor-default">
+            * ces informations sont obligatoires
+          </p>
+          <div class="text-center">
+            <button
+              type="submit"
+              aria-label="envoyer le formulaire"
+              energyClick
+              class="group relative px-8 py-4 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border-2 border-white/20 rounded-xl text-white font-semibold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:border-white/40 hover:shadow-xl hover:shadow-white/10 active:scale-95"
+            >
+              <span class="relative z-10 transition-all duration-300 group-hover:text-white/95">
+                ✨ Envoyer
+              </span>
+              <div class="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </button>
+          </div>
         </div>
       </form>
     </div>

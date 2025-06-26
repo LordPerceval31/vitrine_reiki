@@ -85,7 +85,13 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": ["src/styles.scss"],
+            "fileReplacements": [
+              {
+                "replace": "src/app/environments/environment.ts",
+                "with": "src/app/environments/environment.test.ts"
+              }
+            ]
           }
         }
       }
