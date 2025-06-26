@@ -28,7 +28,7 @@ describe('Header', () => {
   it('should display the tagline', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Retrouvez votre équilibre énergétique'
+      'Oser prendre soin de soi'
     );
   });
 

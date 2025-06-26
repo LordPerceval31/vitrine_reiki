@@ -1,0 +1,75 @@
+<section
+  #footer
+  id="footer"
+  class="backdrop-blur-md bg-white/10 border-t border-white/20"
+  [class.py-8]="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
+  [class.py-2]="responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
+>
+  <!-- Desktop layout: horizontal -->
+  <div *ngIf="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
+       class="mx-auto px-4 sm:px-6 lg:px-8" 
+       style="max-width: min(90vw, 1280px);">
+    
+    <div class="relative flex items-center justify-center">
+      <p class="absolute left-0 text-white/80 cursor-pointer"
+      (click)="openLegalNotice()"
+         style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
+        les mentions légals
+      </p>
+      <p class="text-white/80 cursor-default flex items-center gap-2"
+         style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
+        <svg class="w-5 h-5 text-white/80" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+        A domicile sur Gagnac-Sur-Garonne et à distance
+      </p>
+      <div class="absolute right-0 flex flex-col items-end">
+        <p class="text-white/70 cursor-default"
+           style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
+          © 2025 Jocelyne DUBA
+        </p>
+        <p class="text-white/70 cursor-default"
+           style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
+          Tous droits réservés
+        </p>
+      </div>
+    </div>
+    
+    <div class="flex justify-center mt-6">
+      <p class="text-white/85 cursor-pointer"
+         style="font-size: clamp(0.75rem, 1vw, 0.875rem);">
+        Site réalisé par DE LUCA Sylvain
+      </p>
+    </div>
+  </div>
+
+  <!-- Mobile/Tablet/Laptop layout: column -->
+  <div *ngIf="responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
+       class="mx-auto px-6 flex flex-col items-center space-y-2">
+    
+    <p class="text-white/90 cursor-pointer"
+    (click)="openLegalNotice()"
+       style="font-size: clamp(0.75rem, 3vw, 1rem);">
+      les mentions légals
+    </p>
+    <p class="text-white/90 cursor-default text-center flex items-center gap-2"
+       style="font-size: clamp(0.75rem, 3vw, 1rem);">
+      <svg class="flex-shrink-0 text-white/90" 
+           style="width: clamp(12px, 3vw, 16px); height: clamp(12px, 3vw, 16px);" 
+           fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+      </svg>
+      A domicile sur Gagnac-Sur-Garonne et à distance
+    </p>
+    <p class="text-white/85 cursor-default"
+       style="font-size: clamp(0.75rem, 3vw, 1rem);">
+      © 2025 Jocelyne DUBA. Tous droits réservés
+    </p>
+    <div class="flex justify-center space-x-2">
+      <p class="text-white/85 cursor-pointer"
+         style="font-size: clamp(0.625rem, 2.5vw, 0.875rem);">
+        Site réalisé par DE LUCA Sylvain
+      </p>
+    </div>
+  </div>
+</section>

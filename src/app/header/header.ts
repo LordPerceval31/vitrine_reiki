@@ -2,7 +2,6 @@ import { Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScrollService } from '../services/scroll';
 import { ResponsiveService } from '../services/responsive';
-import { ScreenSize } from '../types/responsive';
 import { EnergyClickDirective } from '../directives/energy-click';
 
 @Component({
