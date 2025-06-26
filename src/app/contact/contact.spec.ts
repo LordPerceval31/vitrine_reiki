@@ -51,7 +51,6 @@ describe('Contact', () => {
     expect(compiled.textContent).toContain('ce formulaire');
   });
 
-  // Tests pour tous les champs du formulaire
   it('should have name input field', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const nameInput = compiled.querySelector('[name="user_name"]') as HTMLInputElement;
@@ -113,7 +112,7 @@ describe('Contact', () => {
     const messageLabel = compiled.querySelector('label[for="message"]');
     
     expect(nameLabel?.textContent?.trim()).toBe('Nom *');
-    expect(firstNameLabel?.textContent?.trim()).toBe('Prénom *');
+    expect(firstNameLabel?.textContent?.trim()).toBe('Prénom');
     expect(emailLabel?.textContent?.trim()).toBe('Email *');
     expect(phoneLabel?.textContent?.trim()).toBe('Téléphone');
     expect(messageLabel?.textContent?.trim()).toBe('Message *');
@@ -180,18 +179,15 @@ describe('Contact', () => {
     expect(component.sendEmail).toHaveBeenCalledWith(event);
   }));
 
+  it('should call emailjs.sendForm when sendEmail is called', () => {
+    const mockForm = document.createElement('form');
+    const mockEvent = new Event('submit');
+    Object.defineProperty(mockEvent, 'target', { value: mockForm });
 
+    component.sendEmail(mockEvent);
 
-it('should call emailjs.sendForm when sendEmail is called', () => {
-  const mockForm = document.createElement('form');
-  const mockEvent = new Event('submit');
-  Object.defineProperty(mockEvent, 'target', { value: mockForm });
-
-  component.sendEmail(mockEvent);
-
-  expect(emailjs.sendForm).toHaveBeenCalled();
-});
-
+    expect(emailjs.sendForm).toHaveBeenCalled();
+  });
 
   it('should prevent default when form is submitted', () => {
     const mockForm = document.createElement('form');

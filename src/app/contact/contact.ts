@@ -13,10 +13,12 @@ import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { environment } from '../environments/environment';
+import { EnergyClickDirective } from '../directives/energy-click';
 
 @Component({
   selector: 'app-contact',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, EnergyClickDirective],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
@@ -42,26 +44,21 @@ export class Contact implements AfterViewInit, OnDestroy {
             this.isVisible = visible;
             this.cdr.detectChanges();
           });
-      } else {
-        console.log('Contact section NOT found!');
       }
     }, 100);
   }
 
   sendEmail(e: Event): void {
     e.preventDefault();
-emailjs.sendForm(
-  process.env['EMAILJS_SERVICE_ID']!,
-  process.env['EMAILJS_TEMPLATE_ID']!,
-  e.target as HTMLFormElement,
-  { publicKey: process.env['EMAILJS_PUBLIC_KEY']! }
-)
-      .then(() => {
-        console.log('SUCCESS!');
-      })
-      .catch((error) => {
-        console.log('FAILED...', (error as EmailJSResponseStatus).text);
-      });
+    emailjs
+      .sendForm(
+        environment.emailjs.serviceId,
+        environment.emailjs.templateId,
+        e.target as HTMLFormElement,
+        { publicKey: environment.emailjs.publicKey }
+      )
+      .then(() => console.log('SUCCESS!'))
+      .catch((error) => console.log('FAILED...', error.text));
   }
 
   ngOnDestroy(): void {
