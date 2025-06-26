@@ -13,7 +13,6 @@ import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
-import { environment } from '../environments/environment.local';
 
 @Component({
   selector: 'app-contact',
@@ -51,14 +50,12 @@ export class Contact implements AfterViewInit, OnDestroy {
 
   sendEmail(e: Event): void {
     e.preventDefault();
-    emailjs
-    
-      .sendForm(
-        environment.emailjs.serviceId,
-        environment.emailjs.templateId,
-        e.target as HTMLFormElement,
-        { publicKey: environment.emailjs.publicKey }
-      )
+emailjs.sendForm(
+  process.env['EMAILJS_SERVICE_ID']!,
+  process.env['EMAILJS_TEMPLATE_ID']!,
+  e.target as HTMLFormElement,
+  { publicKey: process.env['EMAILJS_PUBLIC_KEY']! }
+)
       .then(() => {
         console.log('SUCCESS!');
       })
