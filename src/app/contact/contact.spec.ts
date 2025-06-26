@@ -179,15 +179,32 @@ describe('Contact', () => {
     expect(component.sendEmail).toHaveBeenCalledWith(event);
   }));
 
-  it('should call emailjs.sendForm when sendEmail is called', () => {
-    const mockForm = document.createElement('form');
-    const mockEvent = new Event('submit');
-    Object.defineProperty(mockEvent, 'target', { value: mockForm });
+it('should call emailjs.sendForm when sendEmail is called', () => {
+  const mockForm = document.createElement('form');
+  
+  // AJOUTE les champs requis
+  const nameInput = document.createElement('input');
+  nameInput.name = 'user_name';
+  nameInput.value = 'Test Name';
+  mockForm.appendChild(nameInput);
+  
+  const emailInput = document.createElement('input');
+  emailInput.name = 'user_email';
+  emailInput.value = 'test@example.com';
+  mockForm.appendChild(emailInput);
+  
+  const messageInput = document.createElement('textarea');
+  messageInput.name = 'message';
+  messageInput.value = 'Test message';
+  mockForm.appendChild(messageInput);
+  
+  const mockEvent = new Event('submit');
+  Object.defineProperty(mockEvent, 'target', { value: mockForm });
 
-    component.sendEmail(mockEvent);
+  component.sendEmail(mockEvent);
 
-    expect(emailjs.sendForm).toHaveBeenCalled();
-  });
+  expect(emailjs.sendForm).toHaveBeenCalled();
+});
 
   it('should prevent default when form is submitted', () => {
     const mockForm = document.createElement('form');

@@ -7,16 +7,19 @@ import { Lahochi } from './treatments/lahochi/lahochi';
 import { About } from './about/about';
 import { Contact } from './contact/contact';
 import { SeoService } from './services/SEO';
+import { Notification } from './notification/notification.component';
+import { NotificationService } from './services/notification.service';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [Header, Hero, Akashic, Usui, Lahochi, About, Contact]
+  imports: [Header, Hero, Akashic, Usui, Lahochi, About, Contact, Notification]
 })
 export class AppComponent {
   private seoService = inject(SeoService);
+   private notificationService = inject(NotificationService);
   
   constructor() {
     this.seoService.updateSEO({

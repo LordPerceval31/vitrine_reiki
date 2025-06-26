@@ -1,10 +1,8 @@
-export type NotificationType = 'success' | 'error' | 'warning' | 'info';
+export type NotificationType = 'success' | 'error';
 
 export interface NotificationData {
   id: string;
   type: NotificationType;
-  title: string;
   message: string;
   duration?: number;
-  missingFields?: string[];
 }
