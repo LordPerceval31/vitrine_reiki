@@ -9,13 +9,14 @@ import { Contact } from './contact/contact';
 import { SeoService } from './services/SEO';
 import { Notification } from './notification/notification.component';
 import { NotificationService } from './services/notification.service';
+import { Footer } from './footer/footer';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [Header, Hero, Akashic, Usui, Lahochi, About, Contact, Notification]
+  imports: [Header, Hero, Akashic, Usui, Lahochi, About, Contact, Footer,  Notification]
 })
 export class AppComponent {
   private seoService = inject(SeoService);
