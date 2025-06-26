@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { environment } from '../environments/environment';
 import { EnergyClickDirective } from '../directives/energy-click';
+import { NotificationService } from '../services/notification.service';
 
 @Component({
   selector: 'app-contact',
@@ -28,6 +29,7 @@ export class Contact implements AfterViewInit, OnDestroy {
   responsiveService = inject(ResponsiveService);
   private visibilityService = inject(VisibilityService);
   private cdr = inject(ChangeDetectorRef);
+  private notificationService = inject(NotificationService);
 
   isVisible = false;
   private visibilitySubscription?: Subscription;
@@ -50,6 +52,25 @@ export class Contact implements AfterViewInit, OnDestroy {
 
   sendEmail(e: Event): void {
     e.preventDefault();
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    const name = formData.get('user_name') as string;
+    const email = formData.get('user_email') as string;
+    const message = formData.get('message') as string;
+
+    if (!name || !email || !message) {
+      this.notificationService.error('Veuillez remplir tous les informations obligatoires');
+      return;
+    }
+
+     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      this.notificationService.error('Format d\'email invalide');
+      return;
+    }
+
     emailjs
       .sendForm(
         environment.emailjs.serviceId,
@@ -57,8 +78,13 @@ export class Contact implements AfterViewInit, OnDestroy {
         e.target as HTMLFormElement,
         { publicKey: environment.emailjs.publicKey }
       )
-      .then(() => console.log('SUCCESS!'))
-      .catch((error) => console.log('FAILED...', error.text));
+      .then(() => {
+        this.notificationService.success('Email envoyé avec succès !');
+        form.reset(); 
+      })
+      .catch(() => {
+        this.notificationService.error('Erreur lors de l\'envoi');
+      });
   }
 
   ngOnDestroy(): void {
