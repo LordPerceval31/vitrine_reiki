@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ResponsiveService } from '../services/responsive';
 import { CommonModule } from '@angular/common';
+import { LegalNoticeService } from '../services/legal-notice.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class Footer {
   responsiveService = inject(ResponsiveService);
+  private legalNoticeService = inject(LegalNoticeService);
 
 
     ngOnInit(): void {
@@ -18,5 +20,7 @@ export class Footer {
   ngOnDestroy(): void {
     this.responsiveService.stopListening();
   }
-  
+  openLegalNotice() {
+    this.legalNoticeService.open();
+  }
 }

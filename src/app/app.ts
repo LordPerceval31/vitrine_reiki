@@ -8,19 +8,18 @@ import { About } from './about/about';
 import { Contact } from './contact/contact';
 import { SeoService } from './services/SEO';
 import { Notification } from './notification/notification.component';
-import { NotificationService } from './services/notification.service';
 import { Footer } from './footer/footer';
+import { LegalNoticeComponent } from './legal-mentions/legal-notice.component';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [Header, Hero, Akashic, Usui, Lahochi, About, Contact, Footer,  Notification]
+  imports: [Header, Hero, Akashic, Usui, Lahochi, About, Contact, Footer,  Notification, LegalNoticeComponent]
 })
 export class AppComponent {
   private seoService = inject(SeoService);
-   private notificationService = inject(NotificationService);
   
   constructor() {
     this.seoService.updateSEO({
