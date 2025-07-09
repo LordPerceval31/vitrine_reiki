@@ -31,19 +31,6 @@ import { Subscription } from 'rxjs';
 
     <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
 
-      <div class="flex-shrink-0 transition-all duration-1000 delay-100"
-           [class.opacity-100]="isVisible"
-           [class.translate-x-0]="isVisible"
-           [class.opacity-0]="!isVisible"
-           [class.translate-x-10]="!isVisible">
-        <img src="./USUI.webp"
-             alt="REIKI USUI - Livre de lumière spirituelle"
-             class="object-cover rounded-lg border-4 border-white/20 shadow-xl"
-             style="width: clamp(250px, 35vw, 384px); 
-                    height: clamp(167px, 23vw, 256px);
-                    aspect-ratio: 3/2;">
-      </div>
-
       <div class="transition-all duration-1000 delay-300"
            style="max-width: min(100%, 512px);"
            [class.opacity-100]="isVisible"
@@ -73,6 +60,18 @@ import { Subscription } from 'rxjs';
             </p>
           </div>
         </div>
+      </div>
+            <div class="flex-shrink-0 transition-all duration-1000 delay-100"
+           [class.opacity-100]="isVisible"
+           [class.translate-x-0]="isVisible"
+           [class.opacity-0]="!isVisible"
+           [class.translate-x-10]="!isVisible">
+        <img src="./USUI.webp"
+             alt="REIKI USUI - Livre de lumière spirituelle"
+             class="object-cover rounded-lg border-4 border-white/20 shadow-xl"
+             style="width: clamp(250px, 35vw, 384px); 
+                    height: clamp(167px, 23vw, 256px);
+                    aspect-ratio: 3/2;">
       </div>
     </div>
   </div>
