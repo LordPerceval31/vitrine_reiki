@@ -1,5 +1,5 @@
 {
-  "name": "vitrine-reiki",
+  "name": "mon-soin-energetique",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:vitrine-reiki": "node dist/vitrine-reiki/server/server.mjs"
+    "serve:ssr:mon-soin-énergétique": "node dist/mon-soin-énergétique/server/server.mjs"
   },
   "private": true,
   "dependencies": {

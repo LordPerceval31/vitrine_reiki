@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "vitrine-reiki": {
+    "mon-soin-energetique": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -62,10 +62,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "vitrine-reiki:build:production"
+              "buildTarget": "mon-soin-energetique:build:production"
             },
             "development": {
-              "buildTarget": "vitrine-reiki:build:development"
+              "buildTarget": "mon-soin-energetique:build:development"
             }
           },
           "defaultConfiguration": "development"
