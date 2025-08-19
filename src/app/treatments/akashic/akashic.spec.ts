@@ -46,8 +46,8 @@ describe('Akashic', () => {
 
   it('should display content paragraphs', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.textContent).toContain('bibliothèque énergétique cosmique');
-    expect(compiled.textContent).toContain('lectrice certifiée');
-    expect(compiled.textContent).toContain('expérience transformatrice');
+    expect(compiled.textContent).toContain('Les Annales Akashiques');
+    expect(compiled.textContent).toContain('En tant que praticienne certifiée');
+    expect(compiled.textContent).toContain('un accès direct');
   });
 });

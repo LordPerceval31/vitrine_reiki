@@ -38,7 +38,7 @@ describe('About', () => {
 
   it('should display content paragraphs', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.textContent).toContain('je suis Jocelyne');
+    expect(compiled.textContent).toContain("moi c'est Jocelyne DUBA");
     expect(compiled.textContent).toContain('la retraite');
     expect(compiled.textContent).toContain('Plus je pratique');
   });

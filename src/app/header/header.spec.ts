@@ -28,7 +28,7 @@ describe('Header', () => {
   it('should display the tagline', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Oser prendre soin de soi'
+      'OSER PRENDRE SOIN DE SOI'
     );
   });
 
@@ -39,10 +39,10 @@ describe('Header', () => {
     
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.textContent).toContain('Présentation');
-    expect(compiled.textContent).toContain('ANNALES AKASHIQUES');
-    expect(compiled.textContent).toContain('REIKI USUI');
-    expect(compiled.textContent).toContain('LAHOCHI');
-    expect(compiled.textContent).toContain('A propos');
+    expect(compiled.textContent).toContain('Annales Akashiques');
+    expect(compiled.textContent).toContain('Reiki Usui');
+    expect(compiled.textContent).toContain('LaHoChi');
+    expect(compiled.textContent).toContain('À propos');
     expect(compiled.textContent).toContain('Contact');
   });
 
