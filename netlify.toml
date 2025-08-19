@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "dist/vitrine-reiki/browser"
+  publish = "dist/mon-soin-énergétique/browser"
 
 [[redirects]]
   from = "/*"

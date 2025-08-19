@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-lahochi',
   template: `<section #lahochiSection 
-           id="REIKI LAHOCHI" 
+           id="LAHOCHI" 
            class="transition-all duration-1000 opacity-0 translate-y-10"
            [class.py-16]="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
            [class.py-0]="responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
@@ -33,7 +33,7 @@ import { Subscription } from 'rxjs';
          [class.translate-y-5]="!isVisible"> 
       <h2 class="font-bold text-white/90 cursor-default"
           style="font-size: clamp(2rem, 5vw, 3rem);">
-        REIKI LAHOCHI
+        LAHOCHI
       </h2>
     </div>
 
@@ -45,7 +45,7 @@ import { Subscription } from 'rxjs';
            [class.opacity-0]="!isVisible"
            [class.translate-x-10]="!isVisible">
         <img src="./LAHOCHI.webp"
-             alt="REIKI LAHOCHI - Livre de lumière spirituelle"
+             alt="LAHOCHI - Livre de lumière spirituelle"
              class="object-cover rounded-lg border-4 border-white/20 shadow-xl"
              style="width: clamp(250px, 35vw, 384px); 
                     height: clamp(167px, 23vw, 256px);
@@ -61,18 +61,18 @@ import { Subscription } from 'rxjs';
 
         <p class="text-white/80 leading-relaxed mb-6 cursor-default"
            style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
-          Le LaHoChi est une technique de guérison énergétique de haute fréquence transmise par Linda Stein-Luthke. Cette énergie spirituelle puissante travaille avec la 13ème octave de la Flamme Violette pour apporter guérison, équilibre et expansion de conscience.
+          Le LaHoChi est une technique de bien-être énergétique dont les racines ancestrales plongent dans les traditions de soin chinoises. Cette approche douce utilise l'imposition des mains pour agir directement sur votre énergie vitale. En réparant les zones de faiblesse, elle vous aide à retrouver un équilibre harmonieux entre votre corps et votre esprit.
         </p>
 
         <p class="text-white/80 leading-relaxed mb-6 cursor-default"
            style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
-          Cette énergie subtile et transformatrice agit en profondeur pour ouvrir les chakras bloqués, restructurer et équilibrer le corps énergétique. Le LaHoChi facilite également l'ouverture du cœur et renforce la connexion avec les dimensions spirituelles supérieures.
+          Pendant une séance, il suffit de vous installer confortablement et de vous laisser guider. Vous pourriez ressentir une sensation de chaleur, ou un profond apaisement. En agissant sur les blocages, le LaHoChi aide à réduire le stress, à apaiser les tensions, et à favoriser une clarté mentale, vous invitant à un lâcher-prise total.
         </p>
 
         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-6 gap-4">
           <p class="text-white/70 leading-relaxed flex-1 cursor-default"
              style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
-            Les séances apportent une sensation de légèreté, de clarté mentale et d'élévation vibratoire. Cette pratique favorise la guérison émotionnelle profonde, l'éveil spirituel et l'alignement avec votre véritable essence divine.
+            Accessible à tous, le LaHoChi ne demande aucune connaissance ou croyance particulière. Mon seul objectif est de vous offrir un moment de calme et de sérénité, un espace dédié à votre bien-être. C'est une invitation à vous reconnecter à vous-même, à vous ressourcer pleinement et à retrouver un sentiment de légèreté.
           </p>
 
           <div class="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-500/20 rounded-lg border border-white/10 flex-shrink-0">
