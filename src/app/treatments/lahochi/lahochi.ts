@@ -33,7 +33,7 @@ import { Subscription } from 'rxjs';
         [class.translate-y-5]="!isVisible"> 
      <h2 class="font-bold text-white/90 cursor-default"
          style="font-size: clamp(2rem, 5vw, 3rem);">
-       Lahochi
+       LaHoChi
      </h2>
    </div>
 

@@ -33,7 +33,7 @@ describe('Usui', () => {
 
   it('should display title', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.textContent).toContain('REIKI USUI');
+    expect(compiled.textContent).toContain('Reiki Usui');
   });
 
   it('should display image', () => {

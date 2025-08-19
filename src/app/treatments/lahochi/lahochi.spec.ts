@@ -33,7 +33,7 @@ describe('Lahochi', () => {
 
   it('should display title', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.textContent).toContain('LAHOCHI');
+    expect(compiled.textContent).toContain('LaHoChi');
   });
 
   it('should display image', () => {
