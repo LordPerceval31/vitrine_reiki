@@ -14,7 +14,7 @@ export class VisibilityService {
     return new Observable<boolean>(subscriber => {
       // Vérification si on est dans le navigateur
       if (!isPlatformBrowser(this.platformId)) {
-        subscriber.next(false); // Visible par défaut côté serveur
+        subscriber.next(false);
         return;
       }
 

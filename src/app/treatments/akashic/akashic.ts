@@ -31,17 +31,24 @@ import { Subscription } from 'rxjs';
 
     <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
 
-      <div class="flex-shrink-0 transition-all duration-1000 delay-100"
+      <div class="flex-shrink-0 transition-all duration-1000 delay-100 flex flex-col items-center"
            [class.opacity-100]="isVisible"
            [class.translate-x-0]="isVisible"
            [class.opacity-0]="!isVisible"
            [class.translate-x-10]="!isVisible">
         <img src="./annales.webp"
              alt="Annales Akashiques - Livre de lumière spirituelle"
-             class="object-cover rounded-lg border-4 border-white/20 shadow-xl"
+             class="object-cover rounded-lg border-4 border-white/20 shadow-xl mb-4"
              style="width: clamp(250px, 35vw, 384px); 
                     height: clamp(167px, 23vw, 256px);
                     aspect-ratio: 3/2;">
+        
+        <div class="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-500/20 rounded-lg border border-white/10">
+          <p class="text-white/95 font-medium cursor-default text-center"
+             style="font-size: clamp(0.875rem, 1.2vw, 1rem);">
+            90 min • 90€
+          </p>
+        </div>
       </div>
 
       <div class="transition-all duration-1000 delay-300"
@@ -51,29 +58,26 @@ import { Subscription } from 'rxjs';
            [class.opacity-0]="!isVisible"
            [class.-translate-x-10]="!isVisible">
 
-        <p class="text-white/80 leading-relaxed mb-6 cursor-default"
-           style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
+        <p
+            class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
+            style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
+          >
           Les Annales Akashiques sont une bibliothèque énergétique cosmique qui contient l'enregistrement de toutes les âmes et de leurs expériences à travers le temps. C'est un champ d'information universel accessible par la conscience élevée.
         </p>
 
-        <p class="text-white/80 leading-relaxed mb-6 cursor-default"
-           style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
+        <p
+            class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
+            style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
+          >
           En tant que lectrice certifiée, je vous accompagne dans l'exploration de vos vies antérieures, la compréhension de vos schémas karmiques et la découverte de votre mission d'âme. Cette pratique permet d'obtenir des réponses profondes sur votre chemin de vie.
         </p>
 
-        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-6 gap-4">
-          <p class="text-white/70 leading-relaxed flex-1 cursor-default"
-             style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
-            Chaque session vous offre un accès direct à la sagesse de votre âme, révélant les blocages énergétiques et les potentiels non exploités. Une expérience transformatrice qui éclaire votre présent et guide votre futur.
-          </p>
-
-          <div class="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-500/20 rounded-lg border border-white/10 flex-shrink-0">
-            <p class="text-white/95 font-medium cursor-default text-center"
-               style="font-size: clamp(0.875rem, 1.2vw, 1rem);">
-              90 min • 90€
-            </p>
-          </div>
-        </div>
+        <p
+          class="text-white/80 leading-relaxed cursor-default text-center text-justify"
+          style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
+        >
+          Chaque session vous offre un accès direct à la sagesse de votre âme, révélant les blocages énergétiques et les potentiels non exploités. Une expérience transformatrice qui éclaire votre présent et guide votre futur.
+        </p>
       </div>
     </div>
   </div>
