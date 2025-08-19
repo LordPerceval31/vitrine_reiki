@@ -28,12 +28,12 @@ describe('Lahochi', () => {
   it('should have correct section id', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const section = compiled.querySelector('section');
-    expect(section?.id).toBe('REIKI LAHOCHI');
+    expect(section?.id).toBe('LAHOCHI');
   });
 
   it('should display title', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.textContent).toContain('REIKI LAHOCHI');
+    expect(compiled.textContent).toContain('LAHOCHI');
   });
 
   it('should display image', () => {
@@ -41,13 +41,13 @@ describe('Lahochi', () => {
     const img = compiled.querySelector('img');
     expect(img).toBeTruthy();
     expect(img?.src).toContain('LAHOCHI.webp');
-    expect(img?.alt).toContain('REIKI LAHOCHI');
+    expect(img?.alt).toContain('LAHOCHI');
   });
 
   it('should display content paragraphs', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.textContent).toContain('haute fréquence');
-    expect(compiled.textContent).toContain('transformatrice');
-    expect(compiled.textContent).toContain('sensation de légèreté');
+    expect(compiled.textContent).toContain('bien-être énergétique');
+    expect(compiled.textContent).toContain('installer confortablement');
+    expect(compiled.textContent).toContain('aucune connaissance');
   });
 });

@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-lahochi',
   template: `<section #lahochiSection 
-           id="REIKI LAHOCHI" 
+           id="LAHOCHI" 
            class="transition-all duration-1000 opacity-0 translate-y-10"
            [class.py-16]="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
            [class.py-0]="responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
@@ -45,7 +45,7 @@ import { Subscription } from 'rxjs';
            [class.opacity-0]="!isVisible"
            [class.translate-x-10]="!isVisible">
         <img src="./LAHOCHI.webp"
-             alt="REIKI LAHOCHI - Livre de lumière spirituelle"
+             alt="LAHOCHI - Livre de lumière spirituelle"
              class="object-cover rounded-lg border-4 border-white/20 shadow-xl"
              style="width: clamp(250px, 35vw, 384px); 
                     height: clamp(167px, 23vw, 256px);
