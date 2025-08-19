@@ -34,7 +34,7 @@ import { Subscription } from 'rxjs';
      <div class="flex justify-center items-center">
        <h2
          class="font-bold text-white/90 mb-6 cursor-default text-center transition-all duration-1000 delay-100"
-         style="font-size: clamp(2rem, 3.5vw, 2.5rem);"
+         style="font-size: clamp(1.6rem, 2.8vw, 2rem);"
          [class.opacity-100]="isVisible"
          [class.translate-x-0]="isVisible"
          [class.opacity-0]="!isVisible"
@@ -58,7 +58,7 @@ import { Subscription } from 'rxjs';
          <img
            src="./photo_profil.webp"
            alt="Portrait de Jocelyne Duba, praticienne certifiée en Reiki Usui et LaHoChi depuis longtemps."
-           class="object-cover rounded-full border-4 border-white/20 shadow-xl"
+           class="object-cover rounded-full border-4 border-yellow-200 shadow-xl"
            style="width: clamp(200px, 30vw, 384px); 
                    height: clamp(200px, 30vw, 384px);
                    aspect-ratio: 1/1;"

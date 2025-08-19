@@ -39,9 +39,9 @@ describe('Header', () => {
     
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.textContent).toContain('Présentation');
-    expect(compiled.textContent).toContain('ANNALES AKASHIQUES');
-    expect(compiled.textContent).toContain('REIKI USUI');
-    expect(compiled.textContent).toContain('LAHOCHI');
+    expect(compiled.textContent).toContain('Annales Akashiques');
+    expect(compiled.textContent).toContain('Reiki Usui');
+    expect(compiled.textContent).toContain('Lahochi');
     expect(compiled.textContent).toContain('A propos');
     expect(compiled.textContent).toContain('Contact');
   });

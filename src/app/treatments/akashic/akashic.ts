@@ -38,17 +38,11 @@ import { Subscription } from 'rxjs';
            [class.translate-x-10]="!isVisible">
         <img src="./annales.webp"
              alt="Annales Akashiques - Livre de lumière spirituelle"
-             class="object-cover rounded-lg border-4 border-white/20 shadow-xl mb-4"
+             class="object-cover rounded-lg border-4 border-yellow-200 shadow-xl mb-4"
              style="width: clamp(250px, 35vw, 384px); 
                     height: clamp(167px, 23vw, 256px);
                     aspect-ratio: 3/2;">
-        
-        <div class="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-500/20 rounded-lg border border-white/10">
-          <p class="text-white/95 font-medium cursor-default text-center"
-             style="font-size: clamp(0.875rem, 1.2vw, 1rem);">
-            90 min • 90€
-          </p>
-        </div>
+      
       </div>
 
       <div class="transition-all duration-1000 delay-300"
@@ -62,21 +56,21 @@ import { Subscription } from 'rxjs';
             class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
             style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
           >
-          Les Annales Akashiques sont une bibliothèque énergétique cosmique qui contient l'enregistrement de toutes les âmes et de leurs expériences à travers le temps. C'est un champ d'information universel accessible par la conscience élevée.
+          Les Annales Akashiques, aussi appelées "livre cosmique de vie", sont un vaste champ d'information énergétique. Cette bibliothèque cosmique enregistre l'intégralité du parcours de votre âme à travers le temps, incluant toutes ses expériences, ses potentiels et ses apprentissages. C'est une ressource concrète et inépuisable.
         </p>
 
         <p
             class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
             style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
           >
-          En tant que lectrice certifiée, je vous accompagne dans l'exploration de vos vies antérieures, la compréhension de vos schémas karmiques et la découverte de votre mission d'âme. Cette pratique permet d'obtenir des réponses profondes sur votre chemin de vie.
+          En tant que praticienne certifiée, mon rôle est d'être un canal clair et neutre. Je vous accompagne dans l'exploration de vos vies antérieures et la compréhension de vos schémas karmiques. Cette pratique vous permet d'obtenir des réponses profondes et de découvrir votre mission d'âme, toujours dans le respect de votre libre arbitre.
         </p>
 
         <p
           class="text-white/80 leading-relaxed cursor-default text-center text-justify"
           style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
         >
-          Chaque session vous offre un accès direct à la sagesse de votre âme, révélant les blocages énergétiques et les potentiels non exploités. Une expérience transformatrice qui éclaire votre présent et guide votre futur.
+        Chaque séance vous offre un accès direct à la sagesse de votre âme. C'est une expérience transformatrice qui révèle les blocages et les potentiels non exploités, vous permettant de mieux comprendre vos peurs et schémas répétitifs. Cela éclaire votre présent et guide votre futur. Les effets des séances sont différents d'une personne à l'autre. Tout dépend de l'état d'esprit de chacun et de sa volonté de créer le changement.
         </p>
       </div>
     </div>
@@ -95,20 +89,15 @@ import { Subscription } from 'rxjs';
       <h2 class="text-4xl font-bold text-white/95 mb-6 cursor-default">Annales Akashiques</h2>
 
       <p class="text-white/90 leading-relaxed mb-6 cursor-default">
-        Les Annales Akashiques sont une bibliothèque énergétique cosmique qui contient l'enregistrement de toutes les âmes et de leurs expériences à travers le temps. C'est un champ d'information universel accessible par la conscience élevée.
+        Les Annales Akashiques, aussi appelées "livre cosmique de vie", sont un vaste champ d'information énergétique. Cette bibliothèque cosmique enregistre l'intégralité du parcours de votre âme à travers le temps, incluant toutes ses expériences, ses potentiels et ses apprentissages. C'est une ressource concrète et inépuisable.
       </p>
 
       <p class="text-white/90 leading-relaxed mb-6 cursor-default">
-        En tant que lectrice certifiée, je vous accompagne dans l'exploration de vos vies antérieures, la compréhension de vos schémas karmiques et la découverte de votre mission d'âme. Cette pratique permet d'obtenir des réponses profondes sur votre chemin de vie.
-      </p>
+        En tant que praticienne certifiée, mon rôle est d'être un canal clair et neutre. Je vous accompagne dans l'exploration de vos vies antérieures et la compréhension de vos schémas karmiques. Cette pratique vous permet d'obtenir des réponses profondes et de découvrir votre mission d'âme, toujours dans le respect de votre libre arbitre.</p>
 
       <p class="text-white/85 leading-relaxed mb-6 cursor-default">
-        Chaque session vous offre un accès direct à la sagesse de votre âme, révélant les blocages énergétiques et les potentiels non exploités. Une expérience transformatrice qui éclaire votre présent et guide votre futur.
-      </p>
-
-      <div class="mt-6 p-4 bg-gradient-to-r from-purple-600/20 to-blue-500/20 rounded-lg border border-white/10">
-        <p class="text-white/95 font-medium text-center text-lg cursor-default">90 min • 90€</p>
-      </div>
+        Chaque séance vous offre un accès direct à la sagesse de votre âme. C'est une expérience transformatrice qui révèle les blocages et les potentiels non exploités, vous permettant de mieux comprendre vos peurs et schémas répétitifs. Cela éclaire votre présent et guide votre futur. Les effets des séances sont différents d'une personne à l'autre. Tout dépend de l'état d'esprit de chacun et de sa volonté de créer le changement.
+        </p>
     </div>
   </div>
 </section>`,
