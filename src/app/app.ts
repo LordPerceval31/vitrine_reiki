@@ -33,7 +33,7 @@ export class AppComponent {
         "@type": "LocalBusiness",
         "name": "Jocelyne DUBA Reiki",
         "description": "Praticienne certifiée en Reiki Usui, LaHoChi et lecture des Annales Akashiques",
-        "url": "https://votre-site.com",
+        "url": "https://mon-soin-energetique.netlify.app",
         "priceRange": "60€-90€",
         "serviceType": "Soins énergétiques",
         "provider": {
