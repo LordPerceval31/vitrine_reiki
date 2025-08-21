@@ -24,7 +24,7 @@ export class AppComponent {
   constructor() {
     this.seoService.updateSEO({
       title: 'Jocelyne DUBA - Reiki Usui, LaHoChi & Annales Akashiques',
-      description: 'Praticienne certifiée en soins énergétiques : Reiki Usui (60€), LaHoChi (60€), Annales Akashiques (90€). Séances pour bien-être, équilibre et guidance spirituelle.',
+      description: 'Praticienne certifiée en soins énergétiques : Reiki Usui, LaHoChi, Annales Akashiques. Séances pour bien-être, équilibre et guidance spirituelle.',
       keywords: 'reiki usui, lahochi, annales akashiques, Jocelyne Duba, soins énergétiques, bien-être, guérison, guidance spirituelle, chakras, vies antérieures',
       ogTitle: 'Jocelyne DUBA - Praticienne Reiki & Guérison Énergétique',
       ogDescription: 'Découvrez les soins énergétiques Reiki Usui, LaHoChi et les lectures d\'Annales Akashiques avec Jocelyne Duba, praticienne certifiée.',
