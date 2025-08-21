@@ -83,7 +83,7 @@ import { Subscription } from 'rxjs';
           >
               Les bienfaits incluent la réduction du stress, l'amélioration du
               sommeil, le soulagement des tensions et une sensation profonde de
-              paix intérieure. C'est une expérience apaisante stimule vos capacités naturelles de guérison. Elle est pratiquée aujourd'hui dans le monde entier.
+              paix intérieure. C'est une expérience apaisante qui stimule vos capacités naturelles de guérison. Elle est pratiquée aujourd'hui dans le monde entier.
             </p>
           </div>
         </div>
@@ -136,7 +136,7 @@ import { Subscription } from 'rxjs';
         <p class="text-white/85 leading-relaxed mb-6 cursor-default">
           Les bienfaits incluent la réduction du stress, l'amélioration du
               sommeil, le soulagement des tensions et une sensation profonde de
-              paix intérieure. C'est une expérience apaisante stimule vos capacités naturelles de guérison. Elle est pratiquée aujourd'hui dans le monde entier.
+              paix intérieure. C'est une expérience apaisante qui stimule vos capacités naturelles de guérison. Elle est pratiquée aujourd'hui dans le monde entier.
             </p>
       </div>
     </div>
