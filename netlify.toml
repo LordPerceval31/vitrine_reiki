@@ -4,6 +4,6 @@
 
 [[redirects]]
   from = "https://vitrinereiki.netlify.app/*"
-  to = "https://mon-soin-energetique.netlify.app/:splat"
+  to = "https://mon-soin-energetique.fr/:splat"
   status = 301
   force = true
