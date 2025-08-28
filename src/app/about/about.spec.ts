@@ -36,6 +36,11 @@ describe('About', () => {
     expect(compiled.textContent).toContain('À propos de moi');
   });
 
+  it('should picture be displayed', () => {
+  const compiled = fixture.nativeElement as HTMLElement;
+  expect(compiled.querySelector('img')).toBeTruthy();
+});
+
   it('should display content paragraphs', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.textContent).toContain("moi c'est Jocelyne DUBA");

@@ -68,47 +68,20 @@ import { Subscription } from 'rxjs';
           [class.opacity-0]="!isVisible"
           [class.translate-x-10]="!isVisible">
        
-       <p
-           class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
-           style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
-         >
-           Offrez vous un moment pour vous, une pause essentielle pour prendre
-           soin de votre corps et de votre esprit.
-         </p>
-         <p
-           class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
-           style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
-         >
-           Grâce aux différentes méthodes de soins énergétiques que je
-           pratique, je vous accompagnerai afin que vous retrouviez un
-           mieux-être intérieur, une détente, un lâcher prise.
-         </p>
-         <p
-           class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
-           style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
-         >
-           Je vous aiderai à relâcher les tensions, qu'elles soient physiques
-           ou émotionnelles, et retrouver la paix et la sérénité avec plus
-           d'énergie.
-         </p>
-
-         <p
-           class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
-           style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
-         >
-           Je serai à votre écoute sans jugement avec bienveillance et
-           compassion, afin de mieux vous diriger vers la pratique la plus
-           adaptée pour vous.
-         </p>
-
-         <p
-           class="text-white/70 leading-relaxed mb-6 cursor-default text-center text-justify"
-           style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
-         >
-           Je vous donnerai des clés de compréhension, une guidance pour mieux
-           appréhender les défis de la vie, et vous redonner confiance et
-           espoir.
-         </p>
+       <p class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
+          style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
+         Bonjour, moi c'est Jocelyne DUBA, après avoir passé la majeure partie de ma carrière dans le milieu médical, j'ai développé une grande compassion et un profond sens de l'écoute pour les patients. C'est dans ce milieu que j'ai compris à quel point l'accompagnement et la bienveillance sont essentiels.
+       </p>
+       
+       <p class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
+          style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
+         Avant l'heure de la retraite, la question de l'avenir s'est posée, et la réponse m'est apparue comme une évidence : continuer à prendre soin des autres. Je me suis formée aux soins énergétiques avec une certitude grandissante : aider les autres à retrouver leur équilibre intérieur est ma véritable vocation.
+       </p>
+       
+       <p class="text-white/70 leading-relaxed cursor-default text-center text-justify"
+          style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
+         Plus je pratique, plus je vois à quel point l'énergie équilibrée rend plus serein et résilient. Ma mission est de vous accompagner pour que vous trouviez vos propres clés, pour que vous deveniez l'acteur de votre bien-être. C'est en harmonisant votre énergie que vous pourrez faire face aux défis de la vie avec plus de force et de sérénité.
+       </p>
      </div>
      
    </div>
