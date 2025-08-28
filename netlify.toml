@@ -3,7 +3,7 @@
   publish = "dist/mon-soin-energetique/browser"
 
 [[redirects]]
-  from = "https://vitrinereiki.netlify.app/*"
+  from = "https://mon-soin-energetique.netlify.app/*"
   to = "https://mon-soin-energetique.fr/:splat"
   status = 301
   force = true
