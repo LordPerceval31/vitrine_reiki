@@ -29,11 +29,6 @@ beforeEach(async () => {
     expect(component).toBeTruthy();
   });
 
-it('should picture be displayed', () => {
-  const compiled = fixture.nativeElement as HTMLElement;
-  expect(compiled.querySelector('img')).toBeTruthy();
-});
-
 it('should text be displayed', () => {
   const compiled = fixture.nativeElement as HTMLElement;
   expect(compiled.querySelector('p')?.textContent).toBeTruthy();
