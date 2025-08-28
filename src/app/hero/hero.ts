@@ -14,67 +14,41 @@ import { Subscription } from 'rxjs';
 
 @Component({
  selector: 'app-hero',
- template: `<section
-   #heroSection
-   id="presentation"
-   class="transition-all duration-1000 opacity-0 translate-y-10 mt-28"
-   [class.py-16]="
-     !responsiveService.isSmallScreen(responsiveService.screenSize$ | async)
-   "
-   [class.py-0]="
-     responsiveService.isSmallScreen(responsiveService.screenSize$ | async)
-   "
-   [class.opacity-100]="isVisible"
-   [class.translate-y-0]="isVisible"
- >
-   <div
-     class="mx-auto px-4 sm:px-6 lg:px-8"
-     style="max-width: min(90vw, 1280px);"
-   > 
-     <div class="flex justify-center items-center">
-       <h2
-         class="font-bold text-white/90 mb-6 cursor-default text-center transition-all duration-1000 delay-100"
-         style="font-size: clamp(1.6rem, 2.8vw, 2rem);"
-         [class.opacity-100]="isVisible"
-         [class.translate-x-0]="isVisible"
-         [class.opacity-0]="!isVisible"
-         [class.lg:-translate-x-10]="!isVisible"
-       >
-         Autorisez-vous à aller mieux.
-       </h2>
-     </div>
-     
-     <div
-       class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16"
-     >
-       <!-- Responsive profile picture -->
-       <div
-         class="flex-shrink-0 transition-all duration-1000 delay-100"
-         [class.opacity-100]="isVisible"
-         [class.translate-x-0]="isVisible"
-         [class.opacity-0]="!isVisible"
-         [class.lg:-translate-x-10]="!isVisible"
-       >
-         <img
-           src="./photo_profil.webp"
-           alt="Portrait de Jocelyne Duba, praticienne certifiée en Reiki Usui et LaHoChi depuis longtemps."
-           class="object-cover rounded-full border-4 border-yellow-200 shadow-xl"
-           style="width: clamp(200px, 30vw, 384px); 
-                   height: clamp(200px, 30vw, 384px);
-                   aspect-ratio: 1/1;"
-         />
-       </div>
+ template: ` <section #heroSection 
+        id="hero" 
+        class="transition-all duration-1000 opacity-0 translate-y-10 mt-28"
+        [class.py-16]="!responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
+        [class.py-0]="responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
+        [class.opacity-100]="isVisible"
+        [class.translate-y-0]="isVisible">
+ 
+ <div class="mx-auto px-4 sm:px-6 lg:px-8" 
+      style="max-width: min(90vw, 1280px);">
+   
+   <!-- Responsive title -->
+   <div class="w-full text-center mb-8 lg:mb-12 transition-all duration-1000 delay-200"
+        [class.opacity-100]="isVisible"
+        [class.translate-y-0]="isVisible"
+        [class.opacity-0]="!isVisible"
+        [class.translate-y-5]="!isVisible"> 
+     <h2 class="font-bold text-white/90 cursor-default"
+         style="font-size: clamp(2rem, 5vw, 3rem);">
+       Autorisez-vous à aller mieux
+     </h2>
+   </div>
 
-       <!-- Responsive text content -->
-       <div
-         class="transition-all duration-1000 delay-300"
-         style="max-width: min(100%, 512px);"
-         [class.opacity-100]="isVisible"
-         [class.translate-x-0]="isVisible"
-         [class.opacity-0]="!isVisible"
-         [class.lg:translate-x-10]="!isVisible"
-       >
-         <p
+   <!-- Centered content container -->
+   <div class="flex justify-center">
+     
+     <!-- Responsive text content -->
+     <div class="transition-all duration-1000 delay-300"
+          style="max-width: min(100%, 800px);"
+          [class.opacity-100]="isVisible"
+          [class.translate-y-0]="isVisible"
+          [class.opacity-0]="!isVisible"
+          [class.translate-y-10]="!isVisible">
+       
+       <p
            class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
            style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
          >
@@ -115,21 +89,11 @@ import { Subscription } from 'rxjs';
            appréhender les défis de la vie, et vous redonner confiance et
            espoir.
          </p>
-       </div> 
      </div>
      
-     <p
-       class="text-white/70 leading-relaxed cursor-default text-center text-justify transition-all duration-1000 delay-500"
-       style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
-       [class.opacity-100]="isVisible"
-       [class.translate-x-0]="isVisible"
-       [class.opacity-0]="!isVisible"
-       [class.lg:translate-x-10]="!isVisible"
-     >
-       Un soin énergétique ne se substituera jamais à un traitement médical. Il est indispensable de consulter un médecin pour tout problème de santé.
-     </p>
    </div>
- </section>`,
+ </div>
+</section>`,
  imports: [CommonModule],
 })
 export class Hero implements AfterViewInit, OnDestroy {

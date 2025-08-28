@@ -39,39 +39,43 @@ import { Subscription } from 'rxjs';
 
    <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
 
-     <div class="flex-shrink-0 transition-all duration-1000 delay-100 flex flex-col items-center"
-          [class.opacity-100]="isVisible"
-          [class.translate-x-0]="isVisible"
-          [class.opacity-0]="!isVisible"
-          [class.translate-x-10]="!isVisible">
-       <img src="./LAHOCHI.webp"
-            alt="LAHOCHI - Livre de lumière spirituelle"
-            class="object-cover rounded-lg border-4 border-yellow-200 shadow-xl mb-4"
-            style="width: clamp(250px, 35vw, 384px); 
-                   height: clamp(167px, 23vw, 256px);
-                   aspect-ratio: 3/2;">
-     </div>
+  <div class="transition-all duration-1000 delay-300"
+       style="max-width: min(100%, 512px);"
+       [class.opacity-100]="isVisible"
+       [class.translate-x-0]="isVisible"
+       [class.opacity-0]="!isVisible"
+       [class.-translate-x-10]="!isVisible">
 
-     <div class="transition-all duration-1000 delay-300"
-          style="max-width: min(100%, 512px);"
-          [class.opacity-100]="isVisible"
-          [class.translate-x-0]="isVisible"
-          [class.opacity-0]="!isVisible"
-          [class.-translate-x-10]="!isVisible">
+    <p class="text-white/80 leading-relaxed mb-6 cursor-default text-center lg:text-justify"
+       style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
+      Le LaHoChi est une technique de bien-être énergétique dont les racines ancestrales plongent dans les traditions de soins chinoises. Cette approche douce utilise l'imposition des mains pour agir directement sur votre énergie vitale. En réparant les zones de faiblesse, elle vous aide à retrouver un équilibre harmonieux entre votre corps et votre esprit.
+    </p>
 
-       <p class="text-white/80 leading-relaxed mb-6 cursor-default text-center lg:text-justify"
-          style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
-         Le LaHoChi est une technique de bien-être énergétique dont les racines ancestrales plongent dans les traditions de soins chinoises. Cette approche douce utilise l'imposition des mains pour agir directement sur votre énergie vitale. En réparant les zones de faiblesse, elle vous aide à retrouver un équilibre harmonieux entre votre corps et votre esprit.</p>
+    <p class="text-white/80 leading-relaxed mb-6 cursor-default text-center lg:text-justify"
+       style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
+      Pendant une séance, il suffit de vous installer confortablement et de vous laisser guider. Vous pourriez ressentir une sensation de chaleur, ou un profond apaisement. En agissant sur les blocages, le LaHoChi aide à réduire le stress, à apaiser les tensions, et à favoriser une clarté mentale qui vous invite à un lâcher-prise total.
+    </p>
 
-       <p class="text-white/80 leading-relaxed mb-6 cursor-default text-center lg:text-justify"
-          style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
-         Pendant une séance, il suffit de vous installer confortablement et de vous laisser guider. Vous pourriez ressentir une sensation de chaleur, ou un profond apaisement. En agissant sur les blocages, le LaHoChi aide à réduire le stress, à apaiser les tensions, et à favoriser une clarté mentale qui vous invite à un lâcher-prise total.</p>
+    <p class="text-white/80 leading-relaxed cursor-default text-center lg:text-justify"
+       style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
+      Accessible à tous, le LaHoChi ne demande aucune connaissance ou croyance particulière. Mon seul objectif est de vous offrir un moment de calme et de sérénité, un espace dédié à votre bien-être. C'est une invitation à vous reconnecter à vous-même, à vous ressourcer pleinement et à retrouver un sentiment de légèreté.
+    </p>
+  </div>
 
-       <p class="text-white/80 leading-relaxed cursor-default text-center lg:text-justify"
-          style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
-         Accessible à tous, le LaHoChi ne demande aucune connaissance ou croyance particulière. Mon seul objectif est de vous offrir un moment de calme et de sérénité, un espace dédié à votre bien-être. C'est une invitation à vous reconnecter à vous-même, à vous ressourcer pleinement et à retrouver un sentiment de légèreté.</p>
-     </div>
-   </div>
+  <div class="flex-shrink-0 transition-all duration-1000 delay-100 flex flex-col items-center"
+       [class.opacity-100]="isVisible"
+       [class.translate-x-0]="isVisible"
+       [class.opacity-0]="!isVisible"
+       [class.translate-x-10]="!isVisible">
+    <img src="./LAHOCHI.webp"
+         alt="LAHOCHI - Livre de lumière spirituelle"
+         class="object-cover rounded-lg border-4 border-yellow-200 shadow-xl mb-4"
+         style="width: clamp(250px, 35vw, 384px); 
+                height: clamp(167px, 23vw, 256px);
+                aspect-ratio: 3/2;">
+  </div>
+
+</div>
  </div>
 
  <div *ngIf="responsiveService.isSmallScreen(responsiveService.screenSize$ | async)"
