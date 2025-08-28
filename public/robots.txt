@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://mon-soin-énergétique.netlify.app/sitemap.xml
+Sitemap: https://mon-soin-energetique.fr/sitemap.xml
