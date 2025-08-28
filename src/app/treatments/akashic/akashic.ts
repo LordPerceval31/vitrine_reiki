@@ -49,69 +49,70 @@ import { Subscription } from 'rxjs';
         </h2>
       </div>
 
-      <div
-        class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16"
-      >
-        <div
-          class="flex-shrink-0 transition-all duration-1000 delay-100 flex flex-col items-center"
-          [class.opacity-100]="isVisible"
-          [class.translate-x-0]="isVisible"
-          [class.opacity-0]="!isVisible"
-          [class.translate-x-10]="!isVisible"
-        >
-          <img
-            src="./annales.webp"
-            alt="Annales Akashiques - Livre de lumière spirituelle"
-            class="object-cover rounded-lg border-4 border-yellow-200 shadow-xl mb-4"
-            style="width: clamp(250px, 35vw, 384px); 
-                    height: clamp(167px, 23vw, 256px);
-                    aspect-ratio: 3/2;"
-          />
-        </div>
+<div
+  class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16"
+>
 
-        <div
-          class="transition-all duration-1000 delay-300"
-          style="max-width: min(100%, 512px);"
-          [class.opacity-100]="isVisible"
-          [class.translate-x-0]="isVisible"
-          [class.opacity-0]="!isVisible"
-          [class.-translate-x-10]="!isVisible"
-        >
-          <p
-            class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
-            style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
-          >
-            Les Annales Akashiques, aussi appelées "livre cosmique de vie", sont
-            un vaste champ d'information énergétique. Cette bibliothèque
-            cosmique enregistre l'intégralité du parcours de votre âme à travers
-            le temps, incluant toutes ses expériences, ses potentiels et ses
-            apprentissages. C'est une ressource concrète et inépuisable.
-          </p>
-          <p
-            class="text-white/80 leading-relaxed cursor-default mb-6 text-center text-justify"
-            style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
-          >
-            Chaque séance vous offre un accès direct à la sagesse de votre âme.
-            C'est une expérience transformatrice qui révèle les blocages et les
-            potentiels non exploités, vous permettant de mieux comprendre vos
-            peurs et schémas répétitifs. Cela éclaire votre présent et guide
-            votre futur. Les effets des séances sont différents d'une personne à
-            l'autre. Tout dépend de l'état d'esprit de chacun et de sa volonté
-            de créer le changement.
-          </p>
-          <p
-            class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
-            style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
-          >
-            En tant que praticienne certifiée, mon rôle est d'être un canal
-            clair et neutre. Je vous accompagne dans l'exploration de vos vies
-            antérieures et la compréhension de vos schémas karmiques. Cette
-            pratique vous permet d'obtenir des réponses profondes et de
-            découvrir votre mission d'âme, toujours dans le respect de votre
-            libre arbitre.
-          </p>
-        </div>
-      </div>
+  <div
+    class="transition-all duration-1000 delay-300"
+    style="max-width: min(100%, 512px);"
+    [class.opacity-100]="isVisible"
+    [class.translate-x-0]="isVisible"
+    [class.opacity-0]="!isVisible"
+    [class.-translate-x-10]="!isVisible"
+  >
+    <p
+      class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
+      style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
+    >
+      Les Annales Akashiques, aussi appelées "livre cosmique de vie", sont
+      un vaste champ d'information énergétique. Cette bibliothèque
+      cosmique enregistre l'intégralité du parcours de votre âme à travers
+      le temps, incluant toutes ses expériences, ses potentiels et ses
+      apprentissages. C'est une ressource concrète et inépuisable.
+    </p>
+    <p
+      class="text-white/80 leading-relaxed cursor-default mb-6 text-center text-justify"
+      style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
+    >
+      Chaque séance vous offre un accès direct à la sagesse de votre âme.
+      C'est une expérience transformatrice qui révèle les blocages et les
+      potentiels non exploités, vous permettant de mieux comprendre vos
+      peurs et schémas répétitifs. Cela éclaire votre présent et guide
+      votre futur. Les effets des séances sont différents d'une personne à
+      l'autre. Tout dépend de l'état d'esprit de chacun et de sa volonté
+      de créer le changement.
+    </p>
+    <p
+      class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
+      style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
+    >
+      En tant que praticienne certifiée, mon rôle est d'être un canal
+      clair et neutre. Je vous accompagne dans l'exploration de vos vies
+      antérieures et la compréhension de vos schémas karmiques. Cette
+      pratique vous permet d'obtenir des réponses profondes et de
+      découvrir votre mission d'âme, toujours dans le respect de votre
+      libre arbitre.
+    </p>
+  </div>
+
+  <div
+    class="flex-shrink-0 transition-all duration-1000 delay-100 flex flex-col items-center"
+    [class.opacity-100]="isVisible"
+    [class.translate-x-0]="isVisible"
+    [class.opacity-0]="!isVisible"
+    [class.translate-x-10]="!isVisible"
+  >
+    <img
+      src="./annales.webp"
+      alt="Annales Akashiques - Livre de lumière spirituelle"
+      class="object-cover rounded-lg border-4 border-yellow-200 shadow-xl mb-4"
+      style="width: clamp(250px, 35vw, 384px); 
+              height: clamp(167px, 23vw, 256px);
+              aspect-ratio: 3/2;"
+    />
+  </div>
+</div>
     </div>
 
     <div
