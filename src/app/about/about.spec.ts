@@ -47,5 +47,5 @@ describe('About', () => {
     expect(compiled.textContent).toContain('la retraite');
     expect(compiled.textContent).toContain('Plus je pratique');
   });
-  // coucou
+
 });
