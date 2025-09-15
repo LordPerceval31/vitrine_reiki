@@ -36,7 +36,18 @@ import { Subscription } from 'rxjs';
        Autorisez-vous à aller mieux
      </h2>
    </div>
-
+<div class="flex-shrink-0 transition-all duration-1000 delay-100 flex flex-col items-center"
+       [class.opacity-100]="isVisible"
+       [class.translate-y-0]="isVisible"
+       [class.opacity-0]="!isVisible"
+       [class.translate-y-10]="!isVisible">
+    <img src="./Les-symboles-de-renaissance-spirituelle.webp"
+         alt="Les-symboles-de-renaissance-spirituelle - Livre de lumière spirituelle"
+         class="object-cover rounded-lg border-4 border-yellow-200 shadow-xl mb-20"
+         style="width: clamp(250px, 35vw, 384px); 
+                height: clamp(167px, 23vw, 256px);
+                aspect-ratio: 3/2;">
+  </div>
    <!-- Centered content container -->
    <div class="flex justify-center">
      
