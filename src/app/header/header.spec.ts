@@ -32,19 +32,26 @@ describe('Header', () => {
     );
   });
 
-  it('should display navigation links', () => {
-    const responsiveService = TestBed.inject(ResponsiveService);
-    responsiveService.screenSize$.next('desktop');
-    fixture.detectChanges();
-    
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.textContent).toContain('Présentation');
-    expect(compiled.textContent).toContain('Annales Akashiques');
-    expect(compiled.textContent).toContain('Reiki Usui');
-    expect(compiled.textContent).toContain('LaHoChi');
-    expect(compiled.textContent).toContain('À propos');
-    expect(compiled.textContent).toContain('Contact');
-  });
+it('should display navigation links', () => {
+  const responsiveService = TestBed.inject(ResponsiveService);
+  responsiveService.screenSize$.next('desktop');
+  fixture.detectChanges();
+
+  const compiled = fixture.nativeElement as HTMLElement;
+  const navLinks = compiled.querySelectorAll('nav button');
+
+  expect(navLinks.length).toBe(6);
+
+  const linkTexts = Array.from(navLinks).map(link => (link as HTMLButtonElement).textContent?.trim());
+  expect(linkTexts).toEqual([
+    'Présentation',
+    'Annales Akashiques',
+    'Reiki Usui',
+    'LaHochi',
+    'À propos',
+    'Contact'
+  ]);
+});
 
   it('should have clickable navigation links', () => {
     const responsiveService = TestBed.inject(ResponsiveService);
