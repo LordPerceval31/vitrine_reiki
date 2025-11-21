@@ -75,24 +75,16 @@ import { Subscription } from 'rxjs';
       class="text-white/80 leading-relaxed cursor-default mb-6 text-center text-justify"
       style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
     >
-      Chaque séance vous offre un accès direct à la sagesse de votre âme.
-      C'est une expérience transformatrice qui révèle les blocages et les
-      potentiels non exploités, vous permettant de mieux comprendre vos
-      peurs et schémas répétitifs. Cela éclaire votre présent et guide
-      votre futur. Les effets des séances sont différents d'une personne à
-      l'autre. Tout dépend de l'état d'esprit de chacun et de sa volonté
-      de créer le changement.
+          En tant que praticienne certifiée, mon rôle est de vous accompagner, selon vos demandes et vos souhaits, ainsi que vos intérogations face au defis de la vie de tous les jours ; ou dans l'exploration de vos vies
+          antérieures et la compréhension de vos schémas karmiques, si vous le souhaitez, toujours dans le respect de votre libre arbitre.
+          
     </p>
     <p
       class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
       style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
     >
-      En tant que praticienne certifiée, mon rôle est d'être un canal
-      clair et neutre. Je vous accompagne dans l'exploration de vos vies
-      antérieures et la compréhension de vos schémas karmiques. Cette
-      pratique vous permet d'obtenir des réponses profondes et de
-      découvrir votre mission d'âme, toujours dans le respect de votre
-      libre arbitre.
+      C'est une expérience transformatrice qui révèle les blocages et les potentiels non exploités, vous permettant de mieux comprendre vos peurs et schémas répétitifs.
+      Cela éclaire votre présent et guide votre futur en vous donnant des réponses profondes.
     </p>
   </div>
 
@@ -142,18 +134,11 @@ import { Subscription } from 'rxjs';
           C'est une ressource concrète et inépuisable.
         </p>
         <p class="text-white/85 leading-relaxed mb-6 cursor-default">
-          Chaque séance vous offre un accès direct à la sagesse de votre âme.
-          C'est une expérience transformatrice qui révèle les blocages et les
-          potentiels non exploités, vous permettant de mieux comprendre vos
-          peurs et schémas répétitifs. Cela éclaire votre présent et guide votre
-          futur. Les effets des séances sont différents d'une personne à
-          l'autre. Tout dépend de l'état d'esprit de chacun et de sa volonté de
-          créer le changement.
+          En tant que praticienne certifiée, mon rôle est de vous accompagner, selon vos demandes et vos souhaits, ainsi que vos intérogations face au defis de la vie de tous les jours ; ou dans l'exploration de vos vies
+          antérieures et la compréhension de vos schémas karmiques, si vous le souhaitez, toujours dans le respect de votre libre arbitre.
         </p>
         <p class="text-white/90 leading-relaxed mb-6 cursor-default">
-          En tant que praticienne certifiée, mon rôle est d'être un canal clair
-          et neutre. Je vous accompagne dans l'exploration de vos vies
-          antérieures et la compréhension de vos schémas karmiques. Cette
+           Cette
           pratique vous permet d'obtenir des réponses profondes et de découvrir
           votre mission d'âme, toujours dans le respect de votre libre arbitre.
         </p>

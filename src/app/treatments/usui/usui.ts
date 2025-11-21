@@ -83,14 +83,16 @@ import { Subscription } from 'rxjs';
       class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
       style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
     >
-      Le Reiki Usui est une technique de guérison énergétique japonaise, développée par Mikao Usui au 20ème siècle. Inspirée d'anciens écrits, cette méthode douce utilise l'imposition des mains pour canaliser l'énergie de vie et favoriser l'auto-guérison. Elle est de plus en plus reconnue, même en milieu hospitalier en Europe.
+      Le Reiki Usui est une technique de guérison énergétique japonaise, inspirée d'anciens écrits, développée par Mikao Usui au 20ème siècle. 
+      Elle est pratiquée aujourd'hui dans le monde entier, de plus en plus reconnue, même en milieu hospitalier en Europe. L'OMS classe d'ailleurs le Reiki dans la catégorie "santé mentale positive".
     </p>
 
     <p
       class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
       style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
     >
-      Lors d'une séance, vous recevez cette énergie bienfaisante par l'imposition douce des mains sur différents points du corps. Le processus agit sur les plans physique, émotionnel, mental pour libérer les blocages et restaurer l'harmonie énergétique. L'OMS classe d'ailleurs le Reiki dans la catégorie "santé mentale positive".
+      Lors d'une séance, vous recevez cette énergie bienfaisante par l'imposition douce des mains sur différents points du corps, afin de canalyser l'énergie de vie et favoriser l'auto-guérison. 
+      Le processus agit sur les plans physique, émotionnel, mental pour libérer les blocages et restaurer l'harmonie énergétique.
     </p>
 
     <div
@@ -102,7 +104,7 @@ import { Subscription } from 'rxjs';
       >
         Les bienfaits incluent la réduction du stress, l'amélioration du
         sommeil, le soulagement des tensions et une sensation profonde de
-        paix intérieure. C'est une expérience apaisante qui stimule vos capacités naturelles de guérison. Elle est pratiquée aujourd'hui dans le monde entier.
+        paix intérieure. C'est une expérience apaisante qui stimule vos capacités naturelles de guérison.
       </p>
     </div>
   </div>
@@ -129,12 +131,12 @@ import { Subscription } from 'rxjs';
         </h2>
 
         <p class="text-white/90 leading-relaxed mb-6 cursor-default">
-          Le Reiki Usui est une technique de guérison énergétique japonaise, développée par Mikao Usui au 20ème siècle. Inspirée d'anciens écrits, cette méthode douce utilise l'imposition des mains pour canaliser l'énergie de vie et favoriser l'auto-guérison. Elle est de plus en plus reconnue, même en milieu hospitalier en Europe.
-          </p>
+          Le Reiki Usui est une technique de guérison énergétique japonaise, inspirée d'anciens écrits, développée par Mikao Usui au 20ème siècle. 
+      Elle est pratiquée aujourd'hui dans le monde entier, de plus en plus reconnue, même en milieu hospitalier en Europe. L'OMS classe d'ailleurs le Reiki dans la catégorie "santé mentale positive".
 
         <p class="text-white/90 leading-relaxed mb-6 cursor-default">
-         Lors d'une séance, vous recevez cette énergie bienfaisante par l'imposition douce des mains sur différents points du corps. Le processus agit sur les plans physique, émotionnel, mental pour libérer les blocages et restaurer l'harmonie énergétique. L'OMS classe d'ailleurs le Reiki dans la catégorie "santé mentale positive".
-          </p>
+        Lors d'une séance, vous recevez cette énergie bienfaisante par l'imposition douce des mains sur différents points du corps, afin de canalyser l'énergie de vie et favoriser l'auto-guérison. 
+      Le processus agit sur les plans physique, émotionnel, mental pour libérer les blocages et restaurer l'harmonie énergétique.
 
         <p class="text-white/85 leading-relaxed mb-6 cursor-default">
           Les bienfaits incluent la réduction du stress, l'amélioration du
