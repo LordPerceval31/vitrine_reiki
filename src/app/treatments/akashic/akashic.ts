@@ -75,7 +75,7 @@ import { Subscription } from 'rxjs';
       class="text-white/80 leading-relaxed cursor-default mb-6 text-center text-justify"
       style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
     >
-          En tant que praticienne certifiée, mon rôle est de vous accompagner, selon vos demandes et vos souhaits, ainsi que vos intérogations face au defis de la vie de tous les jours ; ou dans l'exploration de vos vies
+          En tant que praticienne certifiée, mon rôle est de vous accompagner, selon vos demandes et vos souhaits, ainsi que vos interrogations face au défis de la vie de tous les jours ; ou dans l'exploration de vos vies
           antérieures et la compréhension de vos schémas karmiques, si vous le souhaitez, toujours dans le respect de votre libre arbitre.
           
     </p>
@@ -134,7 +134,7 @@ import { Subscription } from 'rxjs';
           C'est une ressource concrète et inépuisable.
         </p>
         <p class="text-white/85 leading-relaxed mb-6 cursor-default">
-          En tant que praticienne certifiée, mon rôle est de vous accompagner, selon vos demandes et vos souhaits, ainsi que vos intérogations face au defis de la vie de tous les jours ; ou dans l'exploration de vos vies
+          En tant que praticienne certifiée, mon rôle est de vous accompagner, selon vos demandes et vos souhaits, ainsi que vos interrogations face au défis de la vie de tous les jours ; ou dans l'exploration de vos vies
           antérieures et la compréhension de vos schémas karmiques, si vous le souhaitez, toujours dans le respect de votre libre arbitre.
         </p>
         <p class="text-white/90 leading-relaxed mb-6 cursor-default">
