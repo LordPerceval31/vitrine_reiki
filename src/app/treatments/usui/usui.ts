@@ -1,4 +1,3 @@
-
 import {
   AfterViewInit,
   Component,
@@ -50,72 +49,82 @@ import { Subscription } from 'rxjs';
         </h2>
       </div>
 
-<div
-  class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16"
->
-  <!-- Image d'abord (sera à gauche sur desktop) -->
-  <div
-    class="flex-shrink-0 transition-all duration-1000 delay-100 flex flex-col items-center"
-    [class.opacity-100]="isVisible"
-    [class.translate-x-0]="isVisible"
-    [class.opacity-0]="!isVisible"
-    [class.-translate-x-10]="!isVisible"
-  >
-    <img
-      src="./USUI.webp"
-      alt="REIKI USUI - Livre de lumière spirituelle"
-      class="object-cover rounded-lg border-4 border-yellow-200 shadow-xl mb-4"
-      style="width: clamp(250px, 35vw, 384px); 
+      <div
+        class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16"
+      >
+        <div
+          class="flex-shrink-0 transition-all duration-1000 delay-100 flex flex-col items-center"
+          [class.opacity-100]="isVisible"
+          [class.translate-x-0]="isVisible"
+          [class.opacity-0]="!isVisible"
+          [class.-translate-x-10]="!isVisible"
+        >
+          <img
+            src="./USUI.webp"
+            alt="REIKI USUI - Livre de lumière spirituelle"
+            class="object-cover rounded-lg border-4 border-yellow-200 shadow-xl"
+            style="width: clamp(250px, 35vw, 384px); 
               height: clamp(167px, 23vw, 256px);
               aspect-ratio: 3/2;"
-    />
-  </div>
+          />
+        </div>
 
-  <!-- Texte ensuite (sera à droite sur desktop) -->
-  <div
-    class="transition-all duration-1000 delay-300"
-    style="max-width: min(100%, 512px);"
-    [class.opacity-100]="isVisible"
-    [class.translate-x-0]="isVisible"
-    [class.opacity-0]="!isVisible"
-    [class.translate-x-10]="!isVisible"
-  >
-    <p
-      class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
-      style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
-    >
-      Le Reiki Usui est une technique de guérison énergétique japonaise, 
-      développée par Mikao Usui au 20ème siècle. Inspirée d'anciens écrits, 
-      cette méthode douce utilise l'imposition des mains pour canaliser 
-      l'énergie de vie et favoriser l'auto-guérison. Elle est de plus en plus reconnue, 
-      même en milieu hospitalier en Europe.
-    </p>
+        <div
+          class="transition-all duration-1000 delay-300"
+          style="max-width: min(100%, 512px);"
+          [class.opacity-100]="isVisible"
+          [class.translate-x-0]="isVisible"
+          [class.opacity-0]="!isVisible"
+          [class.translate-x-10]="!isVisible"
+        >
+          <p
+            class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
+            style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
+          >
+            Le Reiki Usui est une technique de guérison énergétique japonaise,
+            développée par Mikao Usui au 20ème siècle. Inspirée d'anciens
+            écrits, cette méthode douce utilise l'imposition des mains pour
+            canaliser l'énergie de vie et favoriser l'auto-guérison. Elle est de
+            plus en plus reconnue, même en milieu hospitalier en Europe.
+          </p>
 
-    <p
-      class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
-      style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
-    >
-      Lors d'une séance, vous recevez cette énergie bienfaisante par l'imposition douce
-       des mains sur différents points du corps. Le processus agit sur les plans physique, 
-       émotionnel, mental pour libérer les blocages et restaurer l'harmonie énergétique. 
-       L'OMS classe d'ailleurs le Reiki dans la catégorie "santé mentale positive".
-    </p>
+          <p
+            class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
+            style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
+          >
+            Lors d'une séance, vous recevez cette énergie bienfaisante par
+            l'imposition douce des mains sur différents points du corps. Le
+            processus agit sur les plans physique, émotionnel, mental pour
+            libérer les blocages et restaurer l'harmonie énergétique. L'OMS
+            classe d'ailleurs le Reiki dans la catégorie "santé mentale
+            positive".
+          </p>
 
-    <div
-      class="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-6 gap-4"
-    >
-      <p
-        class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
-        style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
-      >
-        Les bienfaits incluent la réduction du stress, l'amélioration du
-        sommeil, le soulagement des tensions et une sensation profonde de
-        paix intérieure. C'est une expérience apaisante qui stimule vos capacités naturelles
-         de guérison. Elle est pratiquée aujourd'hui dans le monde entier.
-      </p>
-    </div>
-  </div>
-</div>
+          <div
+            class="flex flex-col sm:flex-row sm:justify-between sm:items-end mt-6 gap-4"
+          >
+            <p
+              class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify w-full"
+              style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
+            >
+              Les bienfaits incluent la réduction du stress, l'amélioration du
+              sommeil, le soulagement des tensions et une sensation profonde de
+              paix intérieure. C'est une expérience apaisante qui stimule vos
+              capacités naturelles de guérison. Elle est pratiquée aujourd'hui
+              dans le monde entier.
+
+              <span class="block text-right mt-4">
+                <span
+                  class="inline-flex items-baseline gap-2 px-4 py-1 rounded text-white/90 tracking-wider cursor-default hover:bg-white/5 transition-colors"
+                >
+                  <span class="font-bold text-lg">60€</span>
+                  <span class="text-lg">la séance de 60min</span>
+                </span>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div
@@ -138,26 +147,35 @@ import { Subscription } from 'rxjs';
         </h2>
 
         <p class="text-white/90 leading-relaxed mb-6 cursor-default">
-          Le Reiki Usui est une technique de guérison énergétique japonaise, 
-      développée par Mikao Usui au 20ème siècle. Inspirée d'anciens écrits, 
-      cette méthode douce utilise l'imposition des mains pour canaliser 
-      l'énergie de vie et favoriser l'auto-guérison. Elle est de plus en plus reconnue, 
-      même en milieu hospitalier en Europe.
-          </p>
+          Le Reiki Usui est une technique de guérison énergétique japonaise,
+          développée par Mikao Usui au 20ème siècle. Inspirée d'anciens écrits,
+          cette méthode douce utilise l'imposition des mains pour canaliser
+          l'énergie de vie et favoriser l'auto-guérison. Elle est de plus en
+          plus reconnue, même en milieu hospitalier en Europe.
+        </p>
 
         <p class="text-white/90 leading-relaxed mb-6 cursor-default">
-          Lors d'une séance, vous recevez cette énergie bienfaisante par l'imposition douce
-       des mains sur différents points du corps. Le processus agit sur les plans physique, 
-       émotionnel, mental pour libérer les blocages et restaurer l'harmonie énergétique. 
-       L'OMS classe d'ailleurs le Reiki dans la catégorie "santé mentale positive".
-          </p>
+          Lors d'une séance, vous recevez cette énergie bienfaisante par
+          l'imposition douce des mains sur différents points du corps. Le
+          processus agit sur les plans physique, émotionnel, mental pour libérer
+          les blocages et restaurer l'harmonie énergétique. L'OMS classe
+          d'ailleurs le Reiki dans la catégorie "santé mentale positive".
+        </p>
 
-        <p class="text-white/85 leading-relaxed mb-6 cursor-default">
-         Les bienfaits incluent la réduction du stress, l'amélioration du
-        sommeil, le soulagement des tensions et une sensation profonde de
-        paix intérieure. C'est une expérience apaisante qui stimule vos capacités naturelles
-         de guérison. Elle est pratiquée aujourd'hui dans le monde entier.
-            </p>
+        <p class="text-white/85 leading-relaxed mb-8 cursor-default">
+          Les bienfaits incluent la réduction du stress, l'amélioration du
+          sommeil, le soulagement des tensions et une sensation profonde de paix
+          intérieure. C'est une expérience apaisante qui stimule vos capacités
+          naturelles de guérison. Elle est pratiquée aujourd'hui dans le monde
+          entier.
+        </p>
+
+        <div
+          class="inline-flex px-6 py-2 rounded text-white tracking-wider bg-black/20 backdrop-blur-sm items-baseline gap-2"
+        >
+          <span class="font-bold text-lg">60€</span>
+          <span class="text-lg">la séance de 60min</span>
+        </div>
       </div>
     </div>
   </section>`,
