@@ -135,27 +135,28 @@ import { Subscription } from 'rxjs';
         </h2>
 
         <p class="text-white/90 leading-relaxed mb-6 cursor-default">
-          Les Annales Akashiques, aussi appelées "livre cosmique de vie", sont
-          un vaste champ d'information énergétique. Cette bibliothèque cosmique
-          enregistre l'intégralité du parcours de votre âme à travers le temps,
-          incluant toutes ses expériences, ses potentiels et ses apprentissages.
-          C'est une ressource concrète et inépuisable.
+           Les Annales Akashiques, aussi appelées "livre cosmique de vie", sont
+      un vaste champ d'information énergétique. Cette bibliothèque
+      cosmique enregistre l'intégralité du parcours de votre âme à travers
+      le temps, incluant toutes ses expériences, ses potentiels et ses
+      apprentissages. C'est une ressource concrète et inépuisable.
         </p>
         <p class="text-white/85 leading-relaxed mb-6 cursor-default">
           Chaque séance vous offre un accès direct à la sagesse de votre âme.
-          C'est une expérience transformatrice qui révèle les blocages et les
-          potentiels non exploités, vous permettant de mieux comprendre vos
-          peurs et schémas répétitifs. Cela éclaire votre présent et guide votre
-          futur. Les effets des séances sont différents d'une personne à
-          l'autre. Tout dépend de l'état d'esprit de chacun et de sa volonté de
-          créer le changement.
+      C'est une expérience transformatrice qui révèle les blocages et les
+      potentiels non exploités, vous permettant de mieux comprendre vos
+      peurs et schémas répétitifs. Cela éclaire votre présent et guide
+      votre futur. Les effets des séances sont différents d'une personne à
+      l'autre. Tout dépend de l'état d'esprit de chacun et de sa volonté
+      de créer le changement.
         </p>
         <p class="text-white/90 leading-relaxed mb-6 cursor-default">
-          En tant que praticienne certifiée, mon rôle est d'être un canal clair
-          et neutre. Je vous accompagne dans l'exploration de vos vies
-          antérieures et la compréhension de vos schémas karmiques. Cette
-          pratique vous permet d'obtenir des réponses profondes et de découvrir
-          votre mission d'âme, toujours dans le respect de votre libre arbitre.
+         En tant que praticienne certifiée, mon rôle est d'être un canal
+      clair et neutre. Je vous accompagne dans l'exploration de vos vies
+      antérieures et la compréhension de vos schémas karmiques. Cette
+      pratique vous permet d'obtenir des réponses profondes et de
+      découvrir votre mission d'âme, toujours dans le respect de votre
+      libre arbitre.
         </p>
       </div>
     </div>

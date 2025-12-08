@@ -92,7 +92,6 @@ import { Subscription } from 'rxjs';
      
      <p class="text-white/90 leading-relaxed mb-6 cursor-default">
        Le LaHoChi est une technique de bien-être énergétique dont les racines ancestrales plongent dans les traditions de soins chinoises. Cette approche douce utilise l'imposition des mains pour agir directement sur votre énergie vitale. En réparant les zones de faiblesse, elle vous aide à retrouver un équilibre harmonieux entre votre corps et votre esprit.</p>
-     
      <p class="text-white/90 leading-relaxed mb-6 cursor-default">
        Pendant une séance, il suffit de vous installer confortablement et de vous laisser guider. Vous pourriez ressentir une sensation de chaleur, ou un profond apaisement. En agissant sur les blocages, le LaHoChi aide à réduire le stress, à apaiser les tensions, et à favoriser une clarté mentale qui vous invite à un lâcher-prise total.</p>
      
