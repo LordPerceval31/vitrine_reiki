@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 
@@ -26,32 +26,3 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 500;
 }
-=======
-/* You can add global styles to this file, and also import other style files */
-@import "tailwindcss";
-
-/* Import des polices Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lora:wght@400;500;600;700&display=swap');
-
-/* Variables pour les polices */
-:root {
-  --font-primary: 'Roboto', sans-serif;  /* Pour le texte courant */
-  --font-heading: 'Lora', serif;         /* Pour les titres */
-}
-
-/* Application globale */
-body {
-  font-family: var(--font-primary);
-  font-weight: 400;
-  margin: 0;
-  background: linear-gradient(to bottom right, rgb(92, 12, 139), rgb(124, 112, 253));
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  min-height: 100vh;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 500;
-}
->>>>>>> 1341746da1ec14d5a2970e36d5839a64bd2c05dc

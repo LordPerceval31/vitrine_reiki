@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 [build]
   command = "npm run build"
   publish = "dist/mon-soin-energetique/browser"
@@ -7,7 +7,7 @@
   from = "/*"
   to = "/index.html"
   status = 200
-=======
+
 [build]
   command = "npm run build"
   publish = "dist/mon-soin-energetique/browser"
@@ -18,4 +18,3 @@
 
   status = 200
 
->>>>>>> 1341746da1ec14d5a2970e36d5839a64bd2c05dc
