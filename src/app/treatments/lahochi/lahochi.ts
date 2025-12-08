@@ -48,21 +48,17 @@ import { Subscription } from 'rxjs';
 
     <p class="text-white/80 leading-relaxed mb-6 cursor-default text-center lg:text-justify"
        style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
-      Le LaHoChi est une technique de bien-être énergétique dont les racines ancestrales plongent dans les traditions de soins chinoises. 
-      Cette approche douce utilise l'imposition des mains pour agir directement sur votre énergie vitale. En réparant les zones de faiblesse, elle vous aide à retrouver un équilibre harmonieux entre votre corps et votre esprit.
+      Le LaHoChi est une technique de bien-être énergétique dont les racines ancestrales plongent dans les traditions de soins chinoises. Cette approche douce utilise l'imposition des mains pour agir directement sur votre énergie vitale. En réparant les zones de faiblesse, elle vous aide à retrouver un équilibre harmonieux entre votre corps et votre esprit.
     </p>
 
     <p class="text-white/80 leading-relaxed mb-6 cursor-default text-center lg:text-justify"
        style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
-      Pendant une séance, il suffit de vous installer confortablement et de vous relaxer. Vous pourriez ressentir une sensation de chaleur, ou un profond apaisement. 
-      En agissant sur les blocages, le LaHoChi aide à réduire le stress, à apaiser les tensions, et à favoriser une clarté mentale qui vous invite à un lâcher-prise total.
+      Pendant une séance, il suffit de vous installer confortablement et de vous laisser guider. Vous pourriez ressentir une sensation de chaleur, ou un profond apaisement. En agissant sur les blocages, le LaHoChi aide à réduire le stress, à apaiser les tensions, et à favoriser une clarté mentale qui vous invite à un lâcher-prise total.
     </p>
 
     <p class="text-white/80 leading-relaxed cursor-default text-center lg:text-justify"
        style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
-      Accessible à tous, le LaHoChi ne demande aucune connaissance ou croyance particulière. 
-      Mon seul objectif est de vous offrir un moment de calme et de sérénité, un espace dédié à votre bien-être. 
-      C'est une invitation à vous reconnecter à vous-même, à vous ressourcer pleinement et à retrouver un sentiment de légèreté.
+      Accessible à tous, le LaHoChi ne demande aucune connaissance ou croyance particulière. Mon seul objectif est de vous offrir un moment de calme et de sérénité, un espace dédié à votre bien-être. C'est une invitation à vous reconnecter à vous-même, à vous ressourcer pleinement et à retrouver un sentiment de légèreté.
     </p>
   </div>
 
@@ -95,18 +91,12 @@ import { Subscription } from 'rxjs';
      <h2 class="text-4xl font-bold text-white/95 mb-6 cursor-default">LAHOCHI</h2>
      
      <p class="text-white/90 leading-relaxed mb-6 cursor-default">
-       Le LaHoChi est une technique de bien-être énergétique dont les racines ancestrales plongent dans les traditions de soins chinoises. 
-       Cette approche douce utilise l'imposition des mains pour agir directement sur votre énergie vitale. 
-       En réparant les zones de faiblesse, elle vous aide à retrouver un équilibre harmonieux entre votre corps et votre esprit.</p>
-     
+       Le LaHoChi est une technique de bien-être énergétique dont les racines ancestrales plongent dans les traditions de soins chinoises. Cette approche douce utilise l'imposition des mains pour agir directement sur votre énergie vitale. En réparant les zones de faiblesse, elle vous aide à retrouver un équilibre harmonieux entre votre corps et votre esprit.</p>
      <p class="text-white/90 leading-relaxed mb-6 cursor-default">
-       Pendant une séance, il suffit de vous installer confortablement et de vous relaxer. Vous pourriez ressentir une sensation de chaleur, ou un profond apaisement.
-        En agissant sur les blocages, le LaHoChi aide à réduire le stress, à apaiser les tensions, et à favoriser une clarté mentale qui vous invite à un lâcher-prise total.</p>
+       Pendant une séance, il suffit de vous installer confortablement et de vous laisser guider. Vous pourriez ressentir une sensation de chaleur, ou un profond apaisement. En agissant sur les blocages, le LaHoChi aide à réduire le stress, à apaiser les tensions, et à favoriser une clarté mentale qui vous invite à un lâcher-prise total.</p>
      
      <p class="text-white/85 leading-relaxed mb-6 cursor-default">
-       Accessible à tous, le LaHoChi ne demande aucune connaissance ou croyance particulière. 
-       Mon seul objectif est de vous offrir un moment de calme et de sérénité, un espace dédié à votre bien-être. 
-       C'est une invitation à vous reconnecter à vous-même, à vous ressourcer pleinement et à retrouver un sentiment de légèreté.</p>
+       Accessible à tous, le LaHoChi ne demande aucune connaissance ou croyance particulière. Mon seul objectif est de vous offrir un moment de calme et de sérénité, un espace dédié à votre bien-être. C'est une invitation à vous reconnecter à vous-même, à vous ressourcer pleinement et à retrouver un sentiment de légèreté.</p>
    </div>
  </div>
 </section>`,
