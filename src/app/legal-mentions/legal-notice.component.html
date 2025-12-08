@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <section *ngIf="isOpen$ | async" 
      [@fadeInOut]
      class="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
@@ -181,4 +182,189 @@
 
     </div>
   </div>
+=======
+<section *ngIf="isOpen$ | async" 
+     [@fadeInOut]
+     class="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+     (click)="close()">
+  <div class="bg-gradient-to-br from-purple-600 to-blue-500 border border-white/20 rounded-xl max-w-4xl max-h-[80vh] overflow-y-auto p-6"
+       (click)="$event.stopPropagation()">
+    <div class="flex justify-end items-center mb-4">
+      <button (click)="close()" class="text-white/70 hover:text-white text-2xl">✕</button>
+    </div>
+    
+    <div class="text-white/80 space-y-6 text-sm leading-relaxed">
+      
+      <div class="text-center mb-6">
+        <h2 class="text-3xl font-bold text-white/95 mb-2">Mentions légales</h2>
+        <p class="text-white/70 text-xs">En vigueur au 26/06/2025</p>
+      </div>
+
+      <section>
+        <p class="mb-4">
+          Conformément aux dispositions de la loi n°2004-575 du 21 juin 2004 pour la Confiance en l'économie numérique, il est porté à la connaissance des utilisateurs et visiteurs, ci-après l'« Utilisateur », du site <strong>www.votre-site-reiki.com</strong>, ci-après le « Site », les présentes mentions légales.
+        </p>
+        <p class="mb-4">
+          La connexion et la navigation sur le Site par l'Utilisateur implique acceptation intégrale et sans réserve des présentes mentions légales. Ces dernières sont accessibles sur le Site à la rubrique « Mentions légales ».
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-lg font-semibold text-white/90 mb-3">Édition du site</h3>
+        <p class="mb-4">
+          L'édition du Site est assurée par <strong>Jocelyne DUBA</strong>, Auto-entrepreneur, dispensée d'immatriculation au RCS, sous le numéro SIRET 988 271 367, dont l'adresse est située à Gagnac-sur-Garonne (31150).
+        </p>
+        <ul class="list-disc list-inside ml-4 space-y-1">
+          <li>Adresse e-mail : {{ email }}</li>
+          <li>Directrice de la publication : Jocelyne DUBA, ci-après l'« Éditrice »</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 class="text-lg font-semibold text-white/90 mb-3">Hébergeur</h3>
+        <p class="mb-4">
+          L'hébergeur du Site est la société <strong>Netlify, Inc.</strong>, dont le siège social est situé au 2325 3rd Street, Suite 296, San Francisco, CA 94107, États-Unis.
+        </p>
+        <p>
+          Site web : <a href="https://www.netlify.com" class="text-blue-300 hover:text-blue-200 underline" target="_blank">www.netlify.com</a>
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-lg font-semibold text-white/90 mb-3">Accès au site</h3>
+        <p class="mb-4">
+          Le Site est normalement accessible, à tout moment, à l'Utilisateur. Toutefois, l'Éditrice pourra, à tout moment, suspendre, limiter ou interrompre le Site afin de procéder, notamment, à des mises à jour ou des modifications de son contenu.
+        </p>
+        <p class="mb-4">
+          L'Éditrice ne pourra en aucun cas être tenue responsable des conséquences éventuelles de cette indisponibilité sur les activités de l'Utilisateur.
+        </p>
+        <p>
+          Toute utilisation anormale ou dans des conditions anormales est interdite.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-lg font-semibold text-white/90 mb-3">Collecte des données</h3>
+        <p class="mb-4">
+          Le Site assure à l'Utilisateur une collecte et un traitement des données personnelles dans le respect de la vie privée conformément à la loi n°78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés et dans le respect de la règlementation applicable en matière de traitement des données à caractère personnel conformément au règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 (ci-après, ensemble, la « Règlementation applicable en matière de protection des Données à caractère personnel »).
+        </p>
+        
+        <h4 class="font-semibold text-white/85 mb-2">Données collectées</h4>
+        <p class="mb-3">
+          Les données collectées par le biais du formulaire de contact sont utilisées pour :
+        </p>
+        <ul class="list-disc list-inside ml-4 space-y-1 mb-4">
+          <li>Les correspondances avec l'Utilisateur liées à la prise de contact et aux demandes d'informations</li>
+          <li>La réponse aux demandes concernant les soins énergétiques proposés (Reiki Usui, LaHoChi, Annales Akashiques)</li>
+          <li>La prise de rendez-vous et le suivi des séances</li>
+        </ul>
+        
+        <p class="mb-4">
+          Les données comportent : prénom, nom, adresse e-mail et numéro de téléphone (optionnel). Ces données ne sont en aucun cas transmises à des tiers à des fins commerciales.
+        </p>
+
+        <h4 class="font-semibold text-white/85 mb-2">Conservation des données</h4>
+        <p class="mb-4">
+          Les données personnelles sont conservées pour une durée n'excédant pas celle nécessaire aux finalités pour lesquelles elles sont traitées, soit 3 ans maximum à compter du dernier contact.
+        </p>
+
+        <h4 class="font-semibold text-white/85 mb-2">Droits de l'utilisateur</h4>
+        <p class="mb-3">
+          En vertu de la Règlementation applicable en matière de protection des Données à caractère personnel, l'Utilisateur dispose des droits suivants :
+        </p>
+        <ul class="list-disc list-inside ml-4 space-y-1 mb-4">
+          <li>Droit d'accès aux données personnelles</li>
+          <li>Droit de rectification des données inexactes</li>
+          <li>Droit d'effacement (« droit à l'oubli »)</li>
+          <li>Droit de limitation du traitement</li>
+          <li>Droit de portabilité des données</li>
+          <li>Droit d'opposition au traitement</li>
+        </ul>
+        <p class="mb-4">
+          L'Utilisateur peut exercer ces droits par courrier électronique à l'adresse : {{ email }}, en joignant une copie d'un titre d'identité signé.
+        </p>
+        <p>
+          L'Utilisateur dispose également du droit d'introduire une réclamation auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL).
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-lg font-semibold text-white/90 mb-3">Cookies et traceurs</h3>
+        <p class="mb-4">
+          Le Site n'utilise pas de cookies de suivi, d'analyse ou de mesure d'audience. Aucune donnée de navigation n'est collectée à des fins publicitaires, statistiques ou de profilage.
+        </p>
+        <p>
+          Seuls les cookies techniques strictement nécessaires au fonctionnement du site peuvent être utilisés, conformément aux recommandations de la CNIL.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-lg font-semibold text-white/90 mb-3">Propriété intellectuelle</h3>
+        <p class="mb-4">
+          L'ensemble du contenu de ce Site (structure générale, textes, images, sons, know-how, marques, logos, etc.) est la propriété exclusive de Jocelyne DUBA, à l'exception des contenus appartenant à des tiers qui ont donné leur autorisation d'utilisation.
+        </p>
+        <p class="mb-4">
+          Toute utilisation, reproduction, diffusion, commercialisation, modification de toute ou partie du Site, sans autorisation expresse de l'Éditrice est prohibée et pourra entraîner des actions et poursuites judiciaires telles que prévues par la règlementation en vigueur.
+        </p>
+        <p>
+          Il est rappelé que la contrefaçon est sanctionnée pénalement par l'article L.335-2 du Code de la Propriété Intellectuelle.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-lg font-semibold text-white/90 mb-3">Responsabilité et limitations</h3>
+        <p class="mb-4">
+          L'Éditrice s'efforce de fournir sur le Site des informations aussi précises que possible. Toutefois, elle ne pourra être tenue responsable des oublis, des inexactitudes et des carences dans la mise à jour, qu'elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
+        </p>
+        <p class="mb-4">
+          Toutes les informations indiquées sur le Site sont données à titre indicatif, et sont susceptibles d'évoluer. Par ailleurs, les renseignements figurant sur le Site ne sont pas exhaustifs.
+        </p>
+        <p class="mb-4">
+          L'Éditrice ne pourra être tenue responsable de tout dommage de quelque nature qu'il soit résultant de l'interprétation ou de l'utilisation des informations et/ou documents disponibles sur ce Site.
+        </p>
+        <p>
+          Les prestations de soins énergétiques proposées ne remplacent en aucun cas un traitement médical. Il est de votre responsabilité de consulter un professionnel de santé si vous en ressentez le besoin.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-lg font-semibold text-white/90 mb-3">Liens hypertextes</h3>
+        <p class="mb-4">
+          Le Site peut contenir des liens hypertextes vers d'autres sites présents sur le réseau Internet. Les liens vers ces autres ressources vous font quitter le Site.
+        </p>
+        <p>
+          Il est possible qu'un lien ne fonctionne pas correctement et conduise à une page d'erreur 404. L'Éditrice ne pourra être tenue responsable de cette situation.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-lg font-semibold text-white/90 mb-3">Droit applicable et attribution de juridiction</h3>
+        <p class="mb-4">
+          Tout litige en relation avec l'utilisation du Site est soumis au droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de Toulouse.
+        </p>
+        <p>
+          Si une partie des présentes mentions légales devait s'avérer illégale, invalide ou inapplicable pour quelque raison que ce soit, les dispositions en question seraient réputées non écrites et n'entraîneraient pas la nullité des autres dispositions.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-lg font-semibold text-white/90 mb-3">Évolution des mentions légales</h3>
+        <p class="mb-4">
+          L'Éditrice se réserve le droit de modifier, à tout moment et sans préavis, les présentes mentions légales afin de les adapter aux évolutions du Site et/ou de son exploitation.
+        </p>
+        <p>
+          Il est donc conseillé à l'Utilisateur de consulter régulièrement la dernière version des mentions légales disponible sur le Site.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-lg font-semibold text-white/90 mb-3">Contact</h3>
+        <p>
+          Pour toute question relative aux présentes mentions légales ou au Site en général, vous pouvez contacter l'Éditrice à l'adresse électronique suivante : {{ email }}
+        </p>
+      </section>
+
+    </div>
+  </div>
+>>>>>>> 1341746da1ec14d5a2970e36d5839a64bd2c05dc
 </section>
