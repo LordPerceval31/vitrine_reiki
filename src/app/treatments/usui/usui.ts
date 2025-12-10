@@ -115,10 +115,10 @@ import { Subscription } from 'rxjs';
 
               <span class="block text-right mt-4">
                 <span
-                  class="inline-flex items-baseline gap-2 px-4 py-1 rounded text-white/90 tracking-wider cursor-default hover:bg-white/5 transition-colors"
+                  class="inline-flex items-baseline gap-2 px-4 py-1 rounded text-white/90 tracking-wider cursor-default hover:bg-white/5 transition-colors cursor-default"
                 >
-                  <span class="font-bold text-lg">60€</span>
-                  <span class="text-lg">la séance de 60min</span>
+                  <span class="font-bold">60€</span>
+                  <span>la séance de 60min</span>
                 </span>
               </span>
             </p>
@@ -171,10 +171,10 @@ import { Subscription } from 'rxjs';
         </p>
 
         <div
-          class="inline-flex px-6 py-2 rounded text-white tracking-wider bg-black/20 backdrop-blur-sm items-baseline gap-2"
+          class="inline-flex px-6 py-2 rounded text-white tracking-wider bg-black/20 backdrop-blur-sm items-baseline gap-2 cursor-default"
         >
-          <span class="font-bold text-lg">60€</span>
-          <span class="text-lg">la séance de 60min</span>
+          <span class="font-bold">60€</span>
+          <span>la séance de 60min</span>
         </div>
       </div>
     </div>
