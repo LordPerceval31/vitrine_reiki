@@ -28,10 +28,8 @@
               }
             ],
             "styles": ["src/styles.scss"],
-            "server": "src/main.server.ts",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "prerender": false,
+            "ssr": false
           },
           "configurations": {
             "production": {
@@ -101,4 +99,5 @@
   "cli": {
     "analytics": "1b604543-46d0-4af4-adb3-a27c9c58ca41"
   }
+
 }
