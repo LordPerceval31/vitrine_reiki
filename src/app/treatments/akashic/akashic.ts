@@ -77,7 +77,7 @@ import { Subscription } from 'rxjs';
             En tant que praticienne certifiée, mon rôle est de vous accompagner, 
             selon vos demandes et vos souhaits, ainsi que vos interrogations, face aux défis de la vie de tous les jours ;
             ou dans l'exploration de vos vies antérieures et la compréhension de vos schémas karmiques, si vous le souhaitez,
-            toujours das le respect de votre libre arbistre.
+            toujours dans le respect de votre libre arbistre.
           </p>
           <p
             class="text-white/80 leading-relaxed cursor-default text-center text-justify"
@@ -148,7 +148,7 @@ import { Subscription } from 'rxjs';
           En tant que praticienne certifiée, mon rôle est de vous accompagner, 
             selon vos demandes et vos souhaits, ainsi que vos interrogations, face aux défis de la vie de tous les jours ;
             ou dans l'exploration de vos vies antérieures et la compréhension de vos schémas karmiques, si vous le souhaitez,
-            toujours das le respect de votre libre arbistre.
+            toujours dans le respect de votre libre arbistre.
         </p>
         <p class="text-white/90 leading-relaxed mb-8 cursor-default">
           C'est une expérience transformatrice qui revèle les blocages et les potentiels

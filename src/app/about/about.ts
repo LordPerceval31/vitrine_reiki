@@ -70,7 +70,7 @@ import { Subscription } from 'rxjs';
        
        <p class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
           style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">
-         Bonjour je suis Jocelyne DUBA, après avoir passé la majeure partie de ma carrière dans le milieu médical, j'ai développé une grande compassion et un profond sens de l'écoute pour les patients. C'est dans ce milieu que j'ai compris à quel point l'accompagnement et la bienveillance sont essentiels.
+         Bonjour, je suis Jocelyne DUBA, après avoir passé la majeure partie de ma carrière dans le milieu médical, j'ai développé une grande compassion et un profond sens de l'écoute pour les patients. C'est dans ce milieu que j'ai compris à quel point l'accompagnement et la bienveillance sont essentiels.
        </p>
        
        <p class="text-white/80 leading-relaxed mb-6 cursor-default text-center text-justify"
