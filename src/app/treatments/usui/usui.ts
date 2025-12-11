@@ -83,7 +83,7 @@ import { Subscription } from 'rxjs';
           >
           Le Reiki Usui est une technique de guérison énergétique japonaise,
           inspirée d'anciens écrits, développée par Mikao Usui au 20ème siècle. 
-          Elle est pratiqué aujourd'hui dans le monde entier. Elle est de plus en
+          Elle est pratiquée aujourd'hui dans le monde entier. Elle est de plus en
           plus reconnue en Europe, même en milieu hospitalier.
           </p>
 
@@ -147,7 +147,7 @@ import { Subscription } from 'rxjs';
         <p class="text-white/90 leading-relaxed mb-6 cursor-default">
           Le Reiki Usui est une technique de guérison énergétique japonaise,
           inspirée d'anciens écrits, développée par Mikao Usui au 20ème siècle. 
-          Elle est pratiqué aujourd'hui dans le monde entier. Elle est de plus en
+          Elle est pratiquée aujourd'hui dans le monde entier. Elle est de plus en
           plus reconnue en Europe, même en milieu hospitalier.
         </p>
 
