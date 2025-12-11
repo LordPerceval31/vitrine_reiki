@@ -83,7 +83,7 @@ import { Subscription } from 'rxjs';
             class="text-white/80 leading-relaxed cursor-default text-center text-justify"
             style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
           >
-               C'est une expérience transformatrice qui revèle les blocages et les potentiels
+          C'est une expérience transformatrice qui revèle les blocages et les potentiels
           non exploités, vous permettant de mieux comprendre vos peurs et schémas répétitifs. Cela éclaire votre présent et guide votre
           futur en vous donnant des réponses profondes.
 
