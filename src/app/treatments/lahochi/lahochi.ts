@@ -77,7 +77,7 @@ import { Subscription } from 'rxjs';
             style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);"
           >
             Pendant une séance, il suffit de vous installer confortablement et
-            de vous laisser guider. Vous pourriez ressentir une sensation de
+            de vous relaxer. Vous pourriez ressentir une sensation de
             chaleur, ou un profond apaisement. En agissant sur les blocages, le
             LaHoChi aide à réduire le stress, à apaiser les tensions, et à
             favoriser une clarté mentale qui vous invite à un lâcher-prise
@@ -99,7 +99,7 @@ import { Subscription } from 'rxjs';
                 class="inline-flex items-baseline gap-2 px-4 py-1 rounded text-white/90 tracking-wider cursor-default hover:bg-white/5 transition-colors cursor-default"
               >
                 <span class="font-bold">60€</span>
-                <span>la séance de 60min</span>
+                <span>la séance de 60 min</span>
               </span>
             </span>
           </p>
@@ -153,7 +153,7 @@ import { Subscription } from 'rxjs';
         </p>
         <p class="text-white/90 leading-relaxed mb-6 cursor-default">
           Pendant une séance, il suffit de vous installer confortablement et de
-          vous laisser guider. Vous pourriez ressentir une sensation de chaleur,
+          vous relaxer. Vous pourriez ressentir une sensation de chaleur,
           ou un profond apaisement. En agissant sur les blocages, le LaHoChi
           aide à réduire le stress, à apaiser les tensions, et à favoriser une
           clarté mentale qui vous invite à un lâcher-prise total.
@@ -171,7 +171,7 @@ import { Subscription } from 'rxjs';
           class="inline-flex px-6 py-2 rounded text-white tracking-wider bg-black/20 backdrop-blur-sm items-baseline gap-2 cursor-default"
         >
           <span class="font-bold">60€</span>
-          <span>la séance de 60min</span>
+          <span>la séance de 60 min</span>
         </div>
       </div>
     </div>
