@@ -6,3 +6,7 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Cette ligne est souvent nécessaire pour la version 4.0.0
+[functions]
+  node_bundler = "esbuild"
