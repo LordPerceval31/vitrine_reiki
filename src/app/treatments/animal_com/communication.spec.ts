@@ -28,7 +28,7 @@ describe('Communication', () => {
   it('should have correct section id', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const section = compiled.querySelector('section');
-    expect(section?.id).toBe('communication animale');
+    expect(section?.id).toBe('communication-animale');
   });
 
   it('should display title', () => {

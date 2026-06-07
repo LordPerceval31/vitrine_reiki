@@ -17,8 +17,8 @@ describe('AppComponent', () => {
       imports: [AppComponent],
       providers: [
         { provide: SeoService, useValue: seoServiceSpy },
-        { provide: PLATFORM_ID, useValue: 'browser' }
-      ]
+        { provide: PLATFORM_ID, useValue: 'browser' },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
@@ -30,26 +30,36 @@ describe('AppComponent', () => {
   });
 
   it('should set the correct title', () => {
-    expect(seoServiceSpy.updateSEO).toHaveBeenCalledWith(jasmine.objectContaining({
-      title: 'Jocelyne DUBA - Reiki Usui, LaHoChi & Annales Akashiques'
-    }));
+    expect(seoServiceSpy.updateSEO).toHaveBeenCalledWith(
+      jasmine.objectContaining({
+        title:
+          'Jocelyne DUBA | Reiki Usui, LaHoChi, Annales Akashiques & Communication Animale',
+      }),
+    );
   });
 
   it('should add keywords meta tag', () => {
-    expect(seoServiceSpy.updateSEO).toHaveBeenCalledWith(jasmine.objectContaining({
-      keywords: jasmine.stringContaining('reiki usui, lahochi, annales akashiques, Jocelyne Duba')
-    }));
+    const keywords =
+      seoServiceSpy.updateSEO.calls.mostRecent().args[0].keywords;
+
+    expect(keywords).toContain('reiki usui');
+    expect(keywords).toContain('lahochi');
+    expect(keywords).toContain('annales akashiques');
+    expect(keywords).toContain('communication animale');
+    expect(keywords).toContain('Jocelyne Duba');
   });
 
   it('should add author meta tag', () => {
     // L'author est maintenant dans les structured data
-    expect(seoServiceSpy.updateSEO).toHaveBeenCalledWith(jasmine.objectContaining({
-      structuredData: jasmine.objectContaining({
-        provider: jasmine.objectContaining({
-          name: 'Jocelyne Duba'
-        })
-      })
-    }));
+    expect(seoServiceSpy.updateSEO).toHaveBeenCalledWith(
+      jasmine.objectContaining({
+        structuredData: jasmine.objectContaining({
+          provider: jasmine.objectContaining({
+            name: 'Jocelyne Duba',
+          }),
+        }),
+      }),
+    );
   });
 
   it('should call updateSEO once', () => {
