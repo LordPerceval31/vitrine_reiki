@@ -8,9 +8,13 @@
   status = 200
 
 [functions]
+<<<<<<< HEAD
+  node_bundler = "esbuild"
+=======
   node_bundler = "esbuild"
 
 [[plugins]]
   package = "@netlify/angular-runtime"
   [plugins.inputs]
     build_dir = "dist/mon-soin-energetique"
+>>>>>>> 7ee814df0cfe710827afff9e5b29741185e0e8d8
