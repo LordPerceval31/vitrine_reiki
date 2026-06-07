@@ -7,6 +7,10 @@
   to = "/index.html"
   status = 200
 
-# Cette ligne est souvent nécessaire pour la version 4.0.0
 [functions]
   node_bundler = "esbuild"
+
+[[plugins]]
+  package = "@netlify/angular-runtime"
+  [plugins.inputs]
+    build_dir = "dist/mon-soin-energetique"
