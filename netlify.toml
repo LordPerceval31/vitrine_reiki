@@ -9,8 +9,3 @@
 
 [functions]
   node_bundler = "esbuild"
-
-[[plugins]]
-  package = "@netlify/angular-runtime"
-  [plugins.inputs]
-    build_dir = "dist/mon-soin-energetique"
