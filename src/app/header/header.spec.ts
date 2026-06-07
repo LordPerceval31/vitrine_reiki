@@ -11,9 +11,7 @@ describe('Header', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Header],
-      providers: [
-        { provide: PLATFORM_ID, useValue: 'browser' }
-      ]
+      providers: [{ provide: PLATFORM_ID, useValue: 'browser' }],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Header);
@@ -28,39 +26,42 @@ describe('Header', () => {
   it('should display the tagline', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'OSER PRENDRE SOIN DE SOI'
+      'OSER PRENDRE SOIN DE SOI',
     );
   });
 
-it('should display navigation links', () => {
-  const responsiveService = TestBed.inject(ResponsiveService);
-  responsiveService.screenSize$.next('desktop');
-  fixture.detectChanges();
+  it('should display navigation links', () => {
+    const responsiveService = TestBed.inject(ResponsiveService);
+    responsiveService.screenSize$.next('desktop');
+    fixture.detectChanges();
 
-  const compiled = fixture.nativeElement as HTMLElement;
-  const navLinks = compiled.querySelectorAll('nav button');
+    const compiled = fixture.nativeElement as HTMLElement;
+    const navLinks = compiled.querySelectorAll('nav button');
 
-  expect(navLinks.length).toBe(6);
+    expect(navLinks.length).toBe(7);
 
-  const linkTexts = Array.from(navLinks).map(link => (link as HTMLButtonElement).textContent?.trim());
-  expect(linkTexts).toEqual([
-    'Présentation',
-    'Annales Akashiques',
-    'Reiki Usui',
-    'LaHochi',
-    'À propos',
-    'Contact'
-  ]);
-});
+    const linkTexts = Array.from(navLinks).map((link) =>
+      (link as HTMLButtonElement).textContent?.trim(),
+    );
+    expect(linkTexts).toEqual([
+      'Présentation',
+      'Annales Akashiques',
+      'Reiki Usui',
+      'LaHochi',
+      'Communication animale',
+      'À propos',
+      'Contact',
+    ]);
+  });
 
   it('should have clickable navigation links', () => {
     const responsiveService = TestBed.inject(ResponsiveService);
     responsiveService.screenSize$.next('desktop');
     fixture.detectChanges();
-    
+
     const compiled = fixture.nativeElement as HTMLElement;
     const links = compiled.querySelectorAll('button');
-    expect(links.length).toBe(6);
+    expect(links.length).toBe(7);
 
     links.forEach((link) => {
       expect(link.tagName).toBe('BUTTON');
@@ -90,10 +91,10 @@ it('should display navigation links', () => {
     const responsiveService = TestBed.inject(ResponsiveService);
     responsiveService.screenSize$.next('mobile');
     fixture.detectChanges();
-  
+
     const burgerMenu = fixture.nativeElement.querySelector('.burger-menu');
     expect(component.isMobileMenuOpen).toBeFalsy();
-    
+
     burgerMenu.click();
     expect(component.isMobileMenuOpen).toBeTruthy();
   });
@@ -106,9 +107,9 @@ it('should display navigation links', () => {
 
     const mobileNav = fixture.nativeElement.querySelector('.mobile-nav');
     expect(mobileNav).toBeTruthy();
-    
+
     const links = mobileNav.querySelectorAll('button');
-    expect(links.length).toBe(6);
+    expect(links.length).toBe(7);
   });
 
   it('should close mobile menu when navigation link is clicked', () => {
@@ -119,7 +120,7 @@ it('should display navigation links', () => {
 
     const mobileNav = fixture.nativeElement.querySelector('.mobile-nav');
     const firstLink = mobileNav.querySelector('button');
-    
+
     firstLink.click();
     expect(component.isMobileMenuOpen).toBeFalsy();
   });
@@ -128,8 +129,10 @@ it('should display navigation links', () => {
     const responsiveService = TestBed.inject(ResponsiveService);
     responsiveService.screenSize$.next('mobile');
     fixture.detectChanges();
-    
-    const desktopNav = fixture.nativeElement.querySelector('nav:not(.mobile-nav)');
+
+    const desktopNav = fixture.nativeElement.querySelector(
+      'nav:not(.mobile-nav)',
+    );
     expect(desktopNav).toBeNull();
   });
 });
